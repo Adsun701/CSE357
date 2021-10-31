@@ -94,8 +94,9 @@ def grad_descent(x_data, y_data):
   prev_b1 = -1
   b0 = 0
   b1 = 0
-  alpha = 0.001
-  amountDividedBy = 1
+  alpha = 0.000001
+  timesDivided = 0
+  timesOverflowed = 0
   prev_rss = np.inf
   current_rss = np.inf
   done = False
@@ -107,23 +108,29 @@ def grad_descent(x_data, y_data):
     current_rss = rss(y_data, yhat_data)
     #print(i0, ". current_rss is", current_rss)
     if (current_rss > prev_rss):
+      timesOverflowed += 1
       overFlowStep = i0
       alpha /= 10
-      amountDividedBy *= 10
+      if (timesOverflowed < 3):
+        timesDivided += 1
+        timesOverflowed = 0
       b0 = prev_b0
       b1 = prev_b1
       #print("alpha is now", alpha)
       continue
-    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.001):
+    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.000001):
       done = True
       break
     prev_b0 = b0
     prev_b1 = b1
     b0 = b0 - alpha * rs(y_data, yhat_data)
     b1 = b1 - alpha * x_times_rs(x_data, y_data, yhat_data)
-    if (i0 - overFlowStep >= 5):
-      alpha = 0.001
-      amountDividedBy = 1
+    if (overFlowStep > 0 and i0 - overFlowStep >= 5 and timesDivided > 0):
+      alpha *= 10
+      timesDivided -= 1
+      if (timesDivided == 0): overFlowStep = -1
+    elif (i0 % 20 == 0):
+      alpha *= 10
 
     i0 += 1
   # calculate r by multiplying b1 by
@@ -163,7 +170,6 @@ def part1():
   for i in range(1, 13):
     x_data = wines.data[:,i]
     cov_data = covariance(x_data, y_data)
-    print("covariance is ", cov_data)
     x_std = sampleStd(x_data)
     r = cov_data / (x_std * alc_std)
     print("Correlation coefficient r" + str(i), "is", r)
@@ -179,17 +185,16 @@ def part1():
   print("\nPart 1 C:\n")
   for i in range(1, 13):
     x_data = wines.data[:,i]
-    b1, b0 = grad_descent(x_data, y_data)
-    r = rFromSlope(b1, x_data, y_data)
-    print("r" + str(i) + " is", r)
-    x_space = np.linspace(min(x_data) - 1, max(x_data) + 1, 50)
-    plt.plot(x_space, x_space * b1 + b0)
-    plt.scatter(x_data, y_data, c='orange', label='data', alpha=0.8)
-    plt.xlabel("x_data")
-    plt.ylabel("alcohol")
-    plt.title("intensity effect on alcohol")
-    plt.legend()
-    plt.show()
+    xMean = mean(x_data)
+    yMean = mean(y_data)
+    sx = sampleStd(x_data)
+    sy = sampleStd(y_data)
+    x_data_mod = [(x - xMean) / sx for x in x_data]
+    y_data_mod = [(y - yMean) / sy for y in y_data]
+
+    b1, b0 = grad_descent(x_data_mod, y_data_mod)
+    r = b1
+    print("Correlation coefficient r" + str(i), "is", r)
 
   # D. Relate all 12 attributes to alcohol at once
   # using multiple linear regression. Fit a multiple
