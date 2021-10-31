@@ -1,0 +1,432 @@
+Question 1:
+New York University, decision: reject; p: 1.1102230246251565e-16
+
+
+Question 2:
+ASA College                                              ,	 diff: -0.035736, orig p: 1.0, corrected p: 209.0
+Adelphi University                                       ,	 diff: -0.011995, orig p: 0.9999999998255601, corrected p: 208.99999996354205
+Adirondack Community College                             ,	 diff: -0.029725, orig p: 1.0, corrected p: 209.0
+Albany College of Pharmacy and Health Sciences           ,	 diff: 0.000613, orig p: 0.4697726588990778, corrected p: 98.18248570990727
+Albany Medical College                                   ,	 diff: 0.060908, orig p: 1.482076683601008e-10, corrected p: 3.0975402687261067e-08
+Albert Einstein College of Medicine                      ,	 diff: 0.003125, orig p: 0.2107107307820617, corrected p: 44.038542733450896
+Alfred University                                        ,	 diff: 0.072383, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Bank Street College of Education                         ,	 diff: -0.029129, orig p: 0.9999993980227248, corrected p: 208.99987418674948
+Bard College                                             ,	 diff: -0.012515, orig p: 0.999762126414034, corrected p: 208.9502844205331
+Barnard College                                          ,	 diff: 0.013225, orig p: 0.00018288807602340196, corrected p: 0.03822360788889101
+Berkeley College New York campuses                       ,	 diff: -0.034244, orig p: 1.0, corrected p: 209.0
+Boricua College                                          ,	 diff: -0.02964, orig p: 0.9999999999995322, corrected p: 208.99999999990223
+Bryant & Stratton College                                ,	 diff: -0.034932, orig p: 1.0, corrected p: 209.0
+Bryant & Stratton College-Albany                         ,	 diff: 0.114713, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Bryant & Stratton College-Amherst                        ,	 diff: -0.000177, orig p: 0.5471292855088025, corrected p: 114.35002067133972
+Bryant & Stratton College-Buffalo                        ,	 diff: 0.006057, orig p: 0.26966321674996785, corrected p: 56.35961230074328
+Bryant & Stratton College-Greece                         ,	 diff: -0.002157, orig p: 0.6156840261913599, corrected p: 128.6779614739942
+Bryant & Stratton College-Henrietta                      ,	 diff: -0.011005, orig p: 0.851171390276436, corrected p: 177.89482056777513
+Bryant & Stratton College-Southtowns                     ,	 diff: 0.110686, orig p: 4.441257361875728e-10, corrected p: 9.282227886320271e-08
+Bryant & Stratton College-Syracuse North                 ,	 diff: -0.011397, orig p: 0.9162024989341719, corrected p: 191.48632227724192
+CUNY Baruch College                                      ,	 diff: -0.036115, orig p: 1.0, corrected p: 209.0
+CUNY Borough of Manhattan Community College              ,	 diff: -0.036392, orig p: 1.0, corrected p: 209.0
+CUNY Bronx Community College                             ,	 diff: -0.0362, orig p: 1.0, corrected p: 209.0
+CUNY Brooklyn College                                    ,	 diff: -0.035197, orig p: 1.0, corrected p: 209.0
+CUNY City College of New York                            ,	 diff: -0.034627, orig p: 1.0, corrected p: 209.0
+CUNY College of Staten Island                            ,	 diff: -0.033425, orig p: 1.0, corrected p: 209.0
+CUNY Guttman Community College                           ,	 diff: -0.035016, orig p: 0.9999999999999857, corrected p: 208.99999999999702
+CUNY Hostos Community College                            ,	 diff: -0.032452, orig p: 1.0, corrected p: 209.0
+CUNY Hunter College                                      ,	 diff: -0.033581, orig p: 1.0, corrected p: 209.0
+CUNY John Jay College of Criminal Justice                ,	 diff: -0.037041, orig p: 1.0, corrected p: 209.0
+CUNY Kingsborough Community College                      ,	 diff: -0.036744, orig p: 1.0, corrected p: 209.0
+CUNY LaGuardia Community College                         ,	 diff: -0.033649, orig p: 1.0, corrected p: 209.0
+CUNY Lehman College                                      ,	 diff: -0.035665, orig p: 1.0, corrected p: 209.0
+CUNY Medgar Evers College                                ,	 diff: -0.036914, orig p: 1.0, corrected p: 209.0
+CUNY New York City College of Technology                 ,	 diff: -0.035908, orig p: 1.0, corrected p: 209.0
+CUNY Queens College                                      ,	 diff: -0.03496, orig p: 1.0, corrected p: 209.0
+CUNY Queensborough Community College                     ,	 diff: -0.036512, orig p: 1.0, corrected p: 209.0
+CUNY School of Law                                       ,	 diff: -0.033177, orig p: 0.9999980046520414, corrected p: 208.99958297227664
+CUNY York College                                        ,	 diff: -0.030747, orig p: 1.0, corrected p: 209.0
+Canisius College                                         ,	 diff: 0.042198, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Cayuga County Community College                          ,	 diff: -0.022932, orig p: 1.0, corrected p: 209.0
+Cazenovia College                                        ,	 diff: -0.001549, orig p: 0.6265605168071874, corrected p: 130.95114801270216
+Clarkson University                                      ,	 diff: 0.037907, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Clarkson University Capital Region Campus                ,	 diff: -0.037799, orig p: 1.0, corrected p: 209.0
+Clinton Community College                                ,	 diff: -0.036746, orig p: 1.0, corrected p: 209.0
+Colgate University                                       ,	 diff: 0.007997, orig p: 0.010535182087572315, corrected p: 2.201853056302614
+College of Mount Saint Vincent                           ,	 diff: 0.027874, orig p: 3.7331898683490294e-09, corrected p: 7.802366824849472e-07
+Columbia University                                      ,	 diff: 0.001298, orig p: 0.09627073861299851, corrected p: 20.12058437011669
+Columbia-Greene Community College                        ,	 diff: -0.028002, orig p: 0.9999999999997236, corrected p: 208.99999999994222
+Concordia College New York                               ,	 diff: 0.014185, orig p: 0.00244695478571344, corrected p: 0.511413550214109
+Cornell University                                       ,	 diff: 0.002645, orig p: 0.014617929163557197, corrected p: 3.055147195183454
+Culinary Institute of America                            ,	 diff: -0.003381, orig p: 0.8486413766382248, corrected p: 177.366047717389
+D'Youville College                                       ,	 diff: -0.018018, orig p: 0.9999999954230241, corrected p: 208.99999904341203
+Daemen College                                           ,	 diff: 0.0029, orig p: 0.2149769261031681, corrected p: 44.93017755556213
+Davis College                                            ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+DeVry College of New York                                ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+Dominican College                                        ,	 diff: 0.013961, orig p: 0.0009472835140356128, corrected p: 0.19798225443344308
+Dutchess Community College                               ,	 diff: -0.031946, orig p: 1.0, corrected p: 209.0
+Elim Bible Institute and College                         ,	 diff: 2.495302, orig p: 0.0, corrected p: 0.0
+Elmira Business Institute                                ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+Elmira College                                           ,	 diff: 0.181749, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Elyon College                                            ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+Erie Community College                                   ,	 diff: -0.027622, orig p: 1.0, corrected p: 209.0
+Excelsior College                                        ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+Farmingdale State College                                ,	 diff: -0.01033, orig p: 0.9999999952194362, corrected p: 208.99999900086215
+Fashion Institute of Technology                          ,	 diff: -0.023203, orig p: 1.0, corrected p: 209.0
+Finger Lakes Community College                           ,	 diff: -0.020691, orig p: 1.0, corrected p: 209.0
+Finger Lakes Health College of Nursing & Health Sciences ,	 diff: 0.031199, orig p: 0.060781013872539646, corrected p: 12.703231899360786
+Five Towns College                                       ,	 diff: 0.020055, orig p: 0.002269324659697647, corrected p: 0.4742888538768082
+Fordham University                                       ,	 diff: 0.022285, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Fulton-Montgomery Community College                      ,	 diff: -0.024453, orig p: 0.9999999999999316, corrected p: 208.9999999999857
+Genesee Community College                                ,	 diff: -0.028966, orig p: 1.0, corrected p: 209.0
+Glasgow Caledonian New York College                      ,	 diff: -0.037982, orig p: 1.0, corrected p: 209.0
+Hamilton College                                         ,	 diff: -0.007149, orig p: 0.963019097645499, corrected p: 201.2709914079093
+Hartwick College                                         ,	 diff: 0.150144, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Hebrew Union College-Jewish Institute of Religion        ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+Helene Fuld College of Nursing                           ,	 diff: 2.661968, orig p: 0.0, corrected p: 0.0
+Herkimer County Community College                        ,	 diff: -0.025846, orig p: 0.9999999999999978, corrected p: 208.99999999999955
+Hilbert College                                          ,	 diff: 0.033243, orig p: 1.3758353164528003e-06, corrected p: 0.00028754958113863527
+Hobart William Smith Colleges                            ,	 diff: 0.081084, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Hofstra University                                       ,	 diff: -0.004085, orig p: 0.9934890905576833, corrected p: 207.63921992655582
+Houghton College                                         ,	 diff: 0.001416, orig p: 0.42922936098549225, corrected p: 89.70893644596788
+Hudson Valley Community College                          ,	 diff: -0.027207, orig p: 1.0, corrected p: 209.0
+Icahn School of Medicine at Mount Sinai                  ,	 diff: -0.025814, orig p: 0.9999999999999445, corrected p: 208.9999999999884
+Iona College                                             ,	 diff: 0.057433, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Ithaca College                                           ,	 diff: -0.013828, orig p: 0.9999999999978678, corrected p: 208.99999999955438
+Jamestown Business College                               ,	 diff: -0.034676, orig p: 0.9999904075979711, corrected p: 208.99799518797596
+Jamestown Community College                              ,	 diff: -0.017863, orig p: 0.9999999642537608, corrected p: 208.999992529036
+Jefferson Community College                              ,	 diff: -0.026743, orig p: 1.0, corrected p: 209.0
+Keuka College                                            ,	 diff: 0.047667, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Le Moyne College                                         ,	 diff: 0.013379, orig p: 0.0002425451786006727, corrected p: 0.050691942327540596
+Long Island Business Institute                           ,	 diff: -0.036528, orig p: 0.999999999993662, corrected p: 208.99999999867535
+Long Island University                                   ,	 diff: -0.018751, orig p: 1.0, corrected p: 209.0
+Manhattan College                                        ,	 diff: 0.075166, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Manhattanville College                                   ,	 diff: -0.003112, orig p: 0.8101617802513802, corrected p: 169.32381207253846
+Maria College of Albany                                  ,	 diff: 0.024468, orig p: 0.0005416586143155433, corrected p: 0.11320665039194855
+Marist College                                           ,	 diff: 0.087459, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Marymount Manhattan College                              ,	 diff: -0.016745, orig p: 0.9999962046479985, corrected p: 208.9992067714317
+Medaille College                                         ,	 diff: -0.001972, orig p: 0.7173154130489399, corrected p: 149.91892132722842
+Mercy College                                            ,	 diff: -0.023158, orig p: 1.0, corrected p: 209.0
+Metropolitan College of New York                         ,	 diff: -0.023867, orig p: 0.9999988308999033, corrected p: 208.99975565807978
+Mildred Elley School-Albany Campus                       ,	 diff: -0.028865, orig p: 0.9999999998799795, corrected p: 208.9999999749157
+Mildred Elley-New York Campus                            ,	 diff: -0.028865, orig p: 0.9999999998799795, corrected p: 208.9999999749157
+Mohawk Valley Community College                          ,	 diff: -0.03324, orig p: 1.0, corrected p: 209.0
+Molloy College                                           ,	 diff: -0.000432, orig p: 0.5735915539426215, corrected p: 119.8806347740079
+Monroe College                                           ,	 diff: -0.022135, orig p: 1.0, corrected p: 209.0
+Monroe Community College                                 ,	 diff: -0.010792, orig p: 0.9999999999987145, corrected p: 208.99999999973133
+Mount Saint Mary College                                 ,	 diff: 0.020252, orig p: 4.898358704208405e-07, corrected p: 0.00010237569691795567
+Nassau Community College                                 ,	 diff: -0.028826, orig p: 1.0, corrected p: 209.0
+Nazareth College                                         ,	 diff: 0.034735, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+New York Automotive and Diesel Institute                 ,	 diff: -0.034342, orig p: 0.9999726734402953, corrected p: 208.9942887490217
+New York Chiropractic College                            ,	 diff: 0.001824, orig p: 0.4166471185892777, corrected p: 87.07924778515904
+New York College of Health Professions                   ,	 diff: 0.023279, orig p: 0.008924765070946084, corrected p: 1.8652758998277315
+New York College of Podiatric Medicine                   ,	 diff: -0.016819, orig p: 0.9687952205411801, corrected p: 202.47820109310663
+New York College of Traditional Chinese Medicine         ,	 diff: 0.375762, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+New York Institute of Technology                         ,	 diff: -0.026562, orig p: 1.0, corrected p: 209.0
+New York Law School                                      ,	 diff: -0.02805, orig p: 0.9999999976667129, corrected p: 208.99999951234298
+New York Medical College                                 ,	 diff: -0.026873, orig p: 1.0, corrected p: 209.0
+New York School of Interior Design                       ,	 diff: -0.017623, orig p: 0.9944373446230833, corrected p: 207.83740502622442
+New York University                                      ,	 diff: 0.008699, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Niagara County Community College                         ,	 diff: 0.005624, orig p: 0.02068291989079918, corrected p: 4.322730257177028
+Niagara University                                       ,	 diff: 0.03591, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Northeastern Seminary                                    ,	 diff: -0.021365, orig p: 0.9690008110133606, corrected p: 202.52116950179234
+Nyack College                                            ,	 diff: -0.016325, orig p: 0.9999849639634182, corrected p: 208.9968574683544
+Onondaga Community College                               ,	 diff: -0.024287, orig p: 1.0, corrected p: 209.0
+Orange County Community College                          ,	 diff: -0.030022, orig p: 1.0, corrected p: 209.0
+Pace University                                          ,	 diff: -0.020304, orig p: 1.0, corrected p: 209.0
+Pacific College of Oriental Medicine                     ,	 diff: -0.028065, orig p: 0.9999999999955497, corrected p: 208.99999999906987
+Paul Smiths College                                      ,	 diff: -0.030555, orig p: 0.9999999999459984, corrected p: 208.99999998871368
+Plaza College                                            ,	 diff: -0.031504, orig p: 0.9999999949665608, corrected p: 208.9999989480112
+Pratt Institute                                          ,	 diff: -0.03029, orig p: 1.0, corrected p: 209.0
+Rensselaer Polytechnic Institute                         ,	 diff: -0.016965, orig p: 1.0, corrected p: 209.0
+Roberts Wesleyan College                                 ,	 diff: -0.006117, orig p: 0.9243022065242136, corrected p: 193.17916116356065
+Rochester Institute of Technology                        ,	 diff: -0.018215, orig p: 1.0, corrected p: 209.0
+Rockefeller University                                   ,	 diff: 0.261004, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Rockland Community College                               ,	 diff: -0.027062, orig p: 1.0, corrected p: 209.0
+Russell Sage College                                     ,	 diff: -0.022315, orig p: 0.9999999999980564, corrected p: 208.9999999995938
+SUNY Albany                                              ,	 diff: 0.008239, orig p: 9.749174578743691e-09, corrected p: 2.0375774869574315e-06
+SUNY Alfred State College of Technology                  ,	 diff: 0.037104, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Binghamton                                          ,	 diff: 0.044896, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Brockport                                           ,	 diff: 0.017601, orig p: 5.551115123125783e-16, corrected p: 1.1601830607332886e-13
+SUNY Broome Community College                            ,	 diff: -0.025013, orig p: 1.0, corrected p: 209.0
+SUNY Buffalo State                                       ,	 diff: 0.002222, orig p: 0.14619446267536895, corrected p: 30.55464269915211
+SUNY Canton                                              ,	 diff: -0.00461, orig p: 0.9290929563755121, corrected p: 194.18042788248204
+SUNY Cobleskill                                          ,	 diff: 0.028864, orig p: 2.4551027877350862e-11, corrected p: 5.13116482636633e-09
+SUNY College at Potsdam                                  ,	 diff: 0.021051, orig p: 1.5455767776728635e-09, corrected p: 3.2302554653362847e-07
+SUNY College of Environmental Science and Forestry       ,	 diff: -0.004418, orig p: 0.8769174374921708, corrected p: 183.2757444358637
+SUNY College of Optometry                                ,	 diff: 0.11638, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Corning Community College                           ,	 diff: -0.027279, orig p: 1.0, corrected p: 209.0
+SUNY Cortland                                            ,	 diff: 0.146395, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Delhi                                               ,	 diff: 0.000255, orig p: 0.4821145472125066, corrected p: 100.76194036741387
+SUNY Downstate Health Sciences University                ,	 diff: 0.079399, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Empire State College                                ,	 diff: -0.035392, orig p: 1.0, corrected p: 209.0
+SUNY Geneseo                                             ,	 diff: 0.082139, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Maritime College                                    ,	 diff: 0.09115, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Morrisville                                         ,	 diff: 0.011848, orig p: 0.0017559393041132187, corrected p: 0.3669913145596627
+SUNY New Paltz                                           ,	 diff: 0.016096, orig p: 5.013767179207207e-13, corrected p: 1.0478773404543062e-10
+SUNY Old Westbury                                        ,	 diff: -0.020339, orig p: 1.0, corrected p: 209.0
+SUNY Oneonta                                             ,	 diff: 0.110194, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Oswego                                              ,	 diff: 0.034476, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Plattsburgh                                         ,	 diff: 0.046362, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+SUNY Polytechnic Institute                               ,	 diff: -0.022843, orig p: 0.9999999999999972, corrected p: 208.99999999999943
+SUNY Purchase College                                    ,	 diff: -0.011565, orig p: 0.9999925766099905, corrected p: 208.99844851148802
+SUNY University at Buffalo                               ,	 diff: -0.008108, orig p: 0.9999999999999999, corrected p: 208.99999999999997
+SUNY Westchester Community College                       ,	 diff: -0.014285, orig p: 1.0, corrected p: 209.0
+SUNY at Fredonia                                         ,	 diff: 0.050768, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Saint Elizabeth College of Nursing                       ,	 diff: 0.038523, orig p: 0.0066524436433884615, corrected p: 1.3903607214681886
+Sarah Lawrence College                                   ,	 diff: -0.00639, orig p: 0.9270675194825847, corrected p: 193.7571115718602
+Schenectady County Community College                     ,	 diff: -0.031455, orig p: 1.0, corrected p: 209.0
+Siena College                                            ,	 diff: 0.102787, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Skidmore College                                         ,	 diff: -0.005216, orig p: 0.9378743873497928, corrected p: 196.01574695610668
+Sotheby's Institute of Art                               ,	 diff: -0.038032, orig p: 1.0, corrected p: 209.0
+St. Bonaventure University                               ,	 diff: 0.087683, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+St. Francis College                                      ,	 diff: -0.015816, orig p: 0.9999997493061921, corrected p: 208.99994760499413
+St. John Fisher College                                  ,	 diff: 0.021698, orig p: 1.0012157769523355e-10, corrected p: 2.0925409738303813e-08
+St. John's University                                    ,	 diff: -0.007173, orig p: 0.9999999859104051, corrected p: 208.99999705527466
+St. Joseph's College Long Island                         ,	 diff: -0.02484, orig p: 1.0, corrected p: 209.0
+St. Joseph's College New York                            ,	 diff: -0.032892, orig p: 1.0, corrected p: 209.0
+St. Joseph's College of Nursing                          ,	 diff: 0.021717, orig p: 0.036858463028435096, corrected p: 7.703418772942935
+St. Lawrence University                                  ,	 diff: 0.006745, orig p: 0.03863066700962192, corrected p: 8.073809405010982
+St. Thomas Aquinas College                               ,	 diff: 0.029885, orig p: 2.8481661473733766e-12, corrected p: 5.952667248010357e-10
+Suffolk County Community College                         ,	 diff: -0.025447, orig p: 1.0, corrected p: 209.0
+Sullivan County Community College                        ,	 diff: -0.030692, orig p: 0.9999999999999993, corrected p: 208.99999999999986
+Swedish Institute a College of Health Sciences           ,	 diff: -0.026684, orig p: 0.999995536597899, corrected p: 208.99906714896088
+Syracuse University                                      ,	 diff: 0.034395, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+The College of Saint Rose                                ,	 diff: 0.00603, orig p: 0.02487069870691938, corrected p: 5.197976029746151
+The College of Westchester                               ,	 diff: -0.026726, orig p: 0.9999998968060925, corrected p: 208.9999784324733
+The Graduate Center, CUNY                                ,	 diff: -0.027543, orig p: 1.0, corrected p: 209.0
+The King's College                                       ,	 diff: -0.030325, orig p: 1.0, corrected p: 209.0
+The New School                                           ,	 diff: -0.026595, orig p: 1.0, corrected p: 209.0
+Tompkins Cortland Community College                      ,	 diff: -0.0124, orig p: 0.9998306180349947, corrected p: 208.96459916931389
+Touro College                                            ,	 diff: -0.032343, orig p: 1.0, corrected p: 209.0
+Trocaire College                                         ,	 diff: 0.028892, orig p: 4.925947850731305e-07, corrected p: 0.00010295231008028427
+Ulster County Community College                          ,	 diff: -0.033247, orig p: 1.0, corrected p: 209.0
+Union College                                            ,	 diff: 0.087642, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+United States Merchant Marine Academy                    ,	 diff: -0.03347, orig p: 0.9999999999999438, corrected p: 208.99999999998826
+United States Military Academy West Point                ,	 diff: 0.036701, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+University of Rochester                                  ,	 diff: -0.029012, orig p: 1.0, corrected p: 209.0
+Upstate Medical University                               ,	 diff: 0.216579, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Utica College                                            ,	 diff: 0.014624, orig p: 7.492330013070259e-07, corrected p: 0.0001565896972731684
+Vassar College                                           ,	 diff: 0.031711, orig p: 1.9984014443252818e-15, corrected p: 4.176659018639839e-13
+Vaughn College of Aeronautics and Technology             ,	 diff: 0.086889, orig p: 1.1102230246251565e-16, corrected p: 2.3203661214665772e-14
+Villa Maria College                                      ,	 diff: 0.02502, orig p: 0.0004462763396950731, corrected p: 0.09327175499627027
+Wagner College                                           ,	 diff: 0.022509, orig p: 1.14517760385624e-07, corrected p: 2.3934211920595416e-05
+Webb Institute                                           ,	 diff: -0.010254, orig p: 0.7828624882146091, corrected p: 163.61826003685331
+Weill Cornell Medical College                            ,	 diff: -0.009306, orig p: 0.9926550050780948, corrected p: 207.4648960613218
+Wells College                                            ,	 diff: -0.004344, orig p: 0.7355037761903206, corrected p: 153.720289223777
+Word of Life Bible Institute                             ,	 diff: -0.01341, orig p: 0.9649971606467088, corrected p: 201.68440657516214
+Yeshiva University                                       ,	 diff: -0.028056, orig p: 1.0, corrected p: 209.0
+
+
+Question 3:
+New York University, decision: reject; p: 1.037443464468879e-09
+
+
+Question 4:
+Question 5:
+ASA College                                              , 0.0023, stderr CI: [0.0009, 0.0037], bootstrapped CI: [0.0009, 0.0039]
+Adelphi University                                       , 0.026, stderr CI: [0.0227, 0.0294], bootstrapped CI: [0.023, 0.0291]
+Adirondack Community College                             , 0.0083, stderr CI: [0.0055, 0.0111], bootstrapped CI: [0.0055, 0.0113]
+Albany College of Pharmacy and Health Sciences           , 0.0386, stderr CI: [0.0288, 0.0485], bootstrapped CI: [0.0298, 0.0488]
+Albany Medical College                                   , 0.0989, stderr CI: [0.0743, 0.1236], bootstrapped CI: [0.076, 0.1237]
+Albert Einstein College of Medicine                      , 0.0412, stderr CI: [0.0337, 0.0487], bootstrapped CI: [0.033, 0.0486]
+Alfred University                                        , 0.1104, stderr CI: [0.095, 0.1258], bootstrapped CI: [0.096, 0.1267]
+Bank Street College of Education                         , 0.0089, stderr CI: [0.0018, 0.016], bootstrapped CI: [0.003, 0.0163]
+Bard College                                             , 0.0255, stderr CI: [0.0193, 0.0317], bootstrapped CI: [0.0194, 0.032]
+Barnard College                                          , 0.0513, stderr CI: [0.0433, 0.0592], bootstrapped CI: [0.0432, 0.0593]
+Berkeley College New York campuses                       , 0.0038, stderr CI: [0.0018, 0.0058], bootstrapped CI: [0.0022, 0.0057]
+Boricua College                                          , 0.0084, stderr CI: [0.0037, 0.0131], bootstrapped CI: [0.0042, 0.0133]
+Bryant & Stratton College                                , 0.0031, stderr CI: [0.002, 0.0042], bootstrapped CI: [0.0021, 0.0043]
+Bryant & Stratton College-Albany                         , 0.1527, stderr CI: [0.1183, 0.1872], bootstrapped CI: [0.1193, 0.1862]
+Bryant & Stratton College-Amherst                        , 0.0379, stderr CI: [0.0168, 0.0589], bootstrapped CI: [0.0189, 0.0599]
+Bryant & Stratton College-Buffalo                        , 0.0441, stderr CI: [0.0261, 0.0621], bootstrapped CI: [0.0261, 0.0621]
+Bryant & Stratton College-Greece                         , 0.0359, stderr CI: [0.0114, 0.0603], bootstrapped CI: [0.0135, 0.0628]
+Bryant & Stratton College-Henrietta                      , 0.027, stderr CI: [0.0056, 0.0484], bootstrapped CI: [0.009, 0.0495]
+Bryant & Stratton College-Southtowns                     , 0.1487, stderr CI: [0.0986, 0.1988], bootstrapped CI: [0.0974, 0.1949]
+Bryant & Stratton College-Syracuse North                 , 0.0266, stderr CI: [0.0111, 0.0422], bootstrapped CI: [0.0121, 0.0436]
+CUNY Baruch College                                      , 0.0019, stderr CI: [0.0013, 0.0025], bootstrapped CI: [0.0014, 0.0025]
+CUNY Borough of Manhattan Community College              , 0.0016, stderr CI: [0.0012, 0.0021], bootstrapped CI: [0.0012, 0.0022]
+CUNY Bronx Community College                             , 0.0018, stderr CI: [0.001, 0.0026], bootstrapped CI: [0.001, 0.0027]
+CUNY Brooklyn College                                    , 0.0028, stderr CI: [0.0021, 0.0036], bootstrapped CI: [0.0021, 0.0036]
+CUNY City College of New York                            , 0.0034, stderr CI: [0.0025, 0.0043], bootstrapped CI: [0.0026, 0.0042]
+CUNY College of Staten Island                            , 0.0046, stderr CI: [0.0035, 0.0057], bootstrapped CI: [0.0035, 0.0057]
+CUNY Guttman Community College                           , 0.003, stderr CI: [-0.0004, 0.0064], bootstrapped CI: [0.0, 0.007]
+CUNY Hostos Community College                            , 0.0056, stderr CI: [0.0039, 0.0072], bootstrapped CI: [0.0039, 0.0075]
+CUNY Hunter College                                      , 0.0045, stderr CI: [0.0036, 0.0053], bootstrapped CI: [0.0036, 0.0054]
+CUNY John Jay College of Criminal Justice                , 0.001, stderr CI: [0.0005, 0.0015], bootstrapped CI: [0.0006, 0.0015]
+CUNY Kingsborough Community College                      , 0.0013, stderr CI: [0.0008, 0.0018], bootstrapped CI: [0.0009, 0.0018]
+CUNY LaGuardia Community College                         , 0.0044, stderr CI: [0.0034, 0.0054], bootstrapped CI: [0.0034, 0.0054]
+CUNY Lehman College                                      , 0.0024, stderr CI: [0.0016, 0.0032], bootstrapped CI: [0.0016, 0.0032]
+CUNY Medgar Evers College                                , 0.0011, stderr CI: [0.0003, 0.0019], bootstrapped CI: [0.0004, 0.002]
+CUNY New York City College of Technology                 , 0.0021, stderr CI: [0.0014, 0.0028], bootstrapped CI: [0.0015, 0.0028]
+CUNY Queens College                                      , 0.0031, stderr CI: [0.0023, 0.0038], bootstrapped CI: [0.0023, 0.0038]
+CUNY Queensborough Community College                     , 0.0015, stderr CI: [0.0008, 0.0022], bootstrapped CI: [0.0009, 0.0022]
+CUNY School of Law                                       , 0.0049, stderr CI: [-0.0019, 0.0116], bootstrapped CI: [0.0, 0.0121]
+CUNY York College                                        , 0.0073, stderr CI: [0.0055, 0.0091], bootstrapped CI: [0.0055, 0.0092]
+Canisius College                                         , 0.0802, stderr CI: [0.0723, 0.0881], bootstrapped CI: [0.0721, 0.0877]
+Cayuga County Community College                          , 0.0151, stderr CI: [0.0112, 0.019], bootstrapped CI: [0.0117, 0.0191]
+Cazenovia College                                        , 0.0365, stderr CI: [0.0252, 0.0477], bootstrapped CI: [0.0262, 0.0486]
+Clarkson University                                      , 0.0759, stderr CI: [0.0683, 0.0836], bootstrapped CI: [0.0681, 0.0835]
+Clarkson University Capital Region Campus                , 0.0002, stderr CI: [-0.0002, 0.0007], bootstrapped CI: [0.0, 0.0007]
+Clinton Community College                                , 0.0013, stderr CI: [-0.0002, 0.0027], bootstrapped CI: [0.0, 0.003]
+Colgate University                                       , 0.046, stderr CI: [0.0389, 0.0532], bootstrapped CI: [0.0391, 0.0532]
+College of Mount Saint Vincent                           , 0.0659, stderr CI: [0.0548, 0.077], bootstrapped CI: [0.0555, 0.0778]
+Columbia University                                      , 0.0393, stderr CI: [0.0374, 0.0413], bootstrapped CI: [0.0374, 0.0413]
+Columbia-Greene Community College                        , 0.01, stderr CI: [0.0053, 0.0148], bootstrapped CI: [0.0059, 0.0147]
+Concordia College New York                               , 0.0522, stderr CI: [0.0415, 0.063], bootstrapped CI: [0.0419, 0.0631]
+Cornell University                                       , 0.0407, stderr CI: [0.0383, 0.0431], bootstrapped CI: [0.0384, 0.0431]
+Culinary Institute of America                            , 0.0347, stderr CI: [0.0282, 0.0411], bootstrapped CI: [0.0285, 0.0415]
+D'Youville College                                       , 0.02, stderr CI: [0.015, 0.025], bootstrapped CI: [0.0154, 0.0253]
+Daemen College                                           , 0.0409, stderr CI: [0.0338, 0.048], bootstrapped CI: [0.0339, 0.0479]
+Davis College                                            , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+DeVry College of New York                                , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+Dominican College                                        , 0.052, stderr CI: [0.0424, 0.0616], bootstrapped CI: [0.0423, 0.0617]
+Dutchess Community College                               , 0.0061, stderr CI: [0.0045, 0.0077], bootstrapped CI: [0.0045, 0.0078]
+Elim Bible Institute and College                         , 1, stderr CI: [(1-1.0324j), (1+1.0324j)], bootstrapped CI: [1.0, 1.0]
+Elmira Business Institute                                , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+Elmira College                                           , 0.2198, stderr CI: [0.1914, 0.2482], bootstrapped CI: [0.1905, 0.2491]
+Elyon College                                            , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+Erie Community College                                   , 0.0104, stderr CI: [0.0085, 0.0123], bootstrapped CI: [0.0086, 0.0124]
+Excelsior College                                        , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+Farmingdale State College                                , 0.0277, stderr CI: [0.0245, 0.0309], bootstrapped CI: [0.0249, 0.0308]
+Fashion Institute of Technology                          , 0.0148, stderr CI: [0.0123, 0.0174], bootstrapped CI: [0.0123, 0.0175]
+Finger Lakes Community College                           , 0.0173, stderr CI: [0.0141, 0.0206], bootstrapped CI: [0.014, 0.0205]
+Finger Lakes Health College of Nursing & Health Sciences , 0.0692, stderr CI: [0.0254, 0.113], bootstrapped CI: [0.0308, 0.1154]
+Five Towns College                                       , 0.0581, stderr CI: [0.0426, 0.0736], bootstrapped CI: [0.0444, 0.0752]
+Fordham University                                       , 0.0603, stderr CI: [0.0568, 0.0638], bootstrapped CI: [0.0567, 0.0642]
+Fulton-Montgomery Community College                      , 0.0136, stderr CI: [0.009, 0.0181], bootstrapped CI: [0.0092, 0.0184]
+Genesee Community College                                , 0.0091, stderr CI: [0.0066, 0.0115], bootstrapped CI: [0.0068, 0.0116]
+Glasgow Caledonian New York College                      , 0.0, stderr CI: [-0.0, 0.0001], bootstrapped CI: [0.0, 0.0001]
+Hamilton College                                         , 0.0309, stderr CI: [0.0234, 0.0384], bootstrapped CI: [0.0245, 0.0382]
+Hartwick College                                         , 0.1882, stderr CI: [0.1676, 0.2088], bootstrapped CI: [0.1702, 0.2076]
+Hebrew Union College-Jewish Institute of Religion        , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+Helene Fuld College of Nursing                           , 1, stderr CI: [(1-0.7798j), (1+0.7798j)], bootstrapped CI: [1.0, 1.0]
+Herkimer County Community College                        , 0.0122, stderr CI: [0.0079, 0.0165], bootstrapped CI: [0.0081, 0.0167]
+Hilbert College                                          , 0.0713, stderr CI: [0.0547, 0.0879], bootstrapped CI: [0.0551, 0.0886]
+Hobart William Smith Colleges                            , 0.1191, stderr CI: [0.1063, 0.132], bootstrapped CI: [0.1068, 0.1322]
+Hofstra University                                       , 0.0339, stderr CI: [0.0308, 0.0371], bootstrapped CI: [0.0308, 0.037]
+Houghton College                                         , 0.0394, stderr CI: [0.0275, 0.0514], bootstrapped CI: [0.0276, 0.0523]
+Hudson Valley Community College                          , 0.0108, stderr CI: [0.0088, 0.0129], bootstrapped CI: [0.0088, 0.0129]
+Icahn School of Medicine at Mount Sinai                  , 0.0122, stderr CI: [0.0076, 0.0168], bootstrapped CI: [0.0081, 0.0172]
+Iona College                                             , 0.0955, stderr CI: [0.0861, 0.1048], bootstrapped CI: [0.0862, 0.1052]
+Ithaca College                                           , 0.0242, stderr CI: [0.0208, 0.0276], bootstrapped CI: [0.0211, 0.0277]
+Jamestown Business College                               , 0.0034, stderr CI: [-0.0032, 0.0099], bootstrapped CI: [0.0, 0.0101]
+Jamestown Community College                              , 0.0202, stderr CI: [0.0149, 0.0254], bootstrapped CI: [0.015, 0.0257]
+Jefferson Community College                              , 0.0113, stderr CI: [0.0079, 0.0147], bootstrapped CI: [0.008, 0.0149]
+Keuka College                                            , 0.0857, stderr CI: [0.073, 0.0984], bootstrapped CI: [0.0734, 0.0975]
+Le Moyne College                                         , 0.0514, stderr CI: [0.0432, 0.0596], bootstrapped CI: [0.0432, 0.0596]
+Long Island Business Institute                           , 0.0015, stderr CI: [-0.0014, 0.0045], bootstrapped CI: [0.0, 0.006]
+Long Island University                                   , 0.0193, stderr CI: [0.0172, 0.0214], bootstrapped CI: [0.0172, 0.0213]
+Manhattan College                                        , 0.1132, stderr CI: [0.103, 0.1234], bootstrapped CI: [0.1039, 0.1238]
+Manhattanville College                                   , 0.0349, stderr CI: [0.0279, 0.042], bootstrapped CI: [0.028, 0.0418]
+Maria College of Albany                                  , 0.0625, stderr CI: [0.0457, 0.0793], bootstrapped CI: [0.0462, 0.08]
+Marist College                                           , 0.1255, stderr CI: [0.1177, 0.1333], bootstrapped CI: [0.1178, 0.1342]
+Marymount Manhattan College                              , 0.0213, stderr CI: [0.0152, 0.0274], bootstrapped CI: [0.0157, 0.0273]
+Medaille College                                         , 0.0361, stderr CI: [0.029, 0.0431], bootstrapped CI: [0.029, 0.0435]
+Mercy College                                            , 0.0149, stderr CI: [0.0126, 0.0171], bootstrapped CI: [0.0126, 0.017]
+Metropolitan College of New York                         , 0.0142, stderr CI: [0.007, 0.0213], bootstrapped CI: [0.0076, 0.0217]
+Mildred Elley School-Albany Campus                       , 0.0092, stderr CI: [0.0038, 0.0146], bootstrapped CI: [0.0042, 0.015]
+Mildred Elley-New York Campus                            , 0.0092, stderr CI: [0.0038, 0.0146], bootstrapped CI: [0.0042, 0.015]
+Mohawk Valley Community College                          , 0.0048, stderr CI: [0.0032, 0.0064], bootstrapped CI: [0.0032, 0.0064]
+Molloy College                                           , 0.0376, stderr CI: [0.0323, 0.0429], bootstrapped CI: [0.0322, 0.0432]
+Monroe College                                           , 0.0159, stderr CI: [0.0129, 0.0189], bootstrapped CI: [0.0131, 0.0191]
+Monroe Community College                                 , 0.0272, stderr CI: [0.0245, 0.03], bootstrapped CI: [0.0246, 0.0298]
+Mount Saint Mary College                                 , 0.0583, stderr CI: [0.0491, 0.0675], bootstrapped CI: [0.0491, 0.0675]
+Nassau Community College                                 , 0.0092, stderr CI: [0.0078, 0.0106], bootstrapped CI: [0.0079, 0.0107]
+Nazareth College                                         , 0.0728, stderr CI: [0.0638, 0.0817], bootstrapped CI: [0.0636, 0.082]
+New York Automotive and Diesel Institute                 , 0.0037, stderr CI: [-0.0035, 0.0109], bootstrapped CI: [0.0, 0.0111]
+New York Chiropractic College                            , 0.0399, stderr CI: [0.0265, 0.0532], bootstrapped CI: [0.0266, 0.0531]
+New York College of Health Professions                   , 0.0613, stderr CI: [0.0397, 0.083], bootstrapped CI: [0.0402, 0.0846]
+New York College of Podiatric Medicine                   , 0.0212, stderr CI: [0.0056, 0.0368], bootstrapped CI: [0.0061, 0.0394]
+New York College of Traditional Chinese Medicine         , 0.4138, stderr CI: [0.2859, 0.5417], bootstrapped CI: [0.2931, 0.5517]
+New York Institute of Technology                         , 0.0115, stderr CI: [0.0095, 0.0135], bootstrapped CI: [0.0095, 0.0135]
+New York Law School                                      , 0.01, stderr CI: [0.0041, 0.0159], bootstrapped CI: [0.0045, 0.0163]
+New York Medical College                                 , 0.0112, stderr CI: [0.0081, 0.0142], bootstrapped CI: [0.0082, 0.0144]
+New York School of Interior Design                       , 0.0204, stderr CI: [0.009, 0.0318], bootstrapped CI: [0.0102, 0.0323]
+New York University                                      , 0.0467, stderr CI: [0.0449, 0.0486], bootstrapped CI: [0.0449, 0.0485]
+Niagara County Community College                         , 0.0437, stderr CI: [0.0381, 0.0492], bootstrapped CI: [0.038, 0.0493]
+Niagara University                                       , 0.0739, stderr CI: [0.0658, 0.0821], bootstrapped CI: [0.0655, 0.0821]
+Northeastern Seminary                                    , 0.0167, stderr CI: [-0.0021, 0.0354], bootstrapped CI: [0.0, 0.0389]
+Nyack College                                            , 0.0217, stderr CI: [0.0153, 0.0281], bootstrapped CI: [0.0151, 0.0283]
+Onondaga Community College                               , 0.0137, stderr CI: [0.0115, 0.016], bootstrapped CI: [0.0116, 0.016]
+Orange County Community College                          , 0.008, stderr CI: [0.0059, 0.0102], bootstrapped CI: [0.0059, 0.0103]
+Pace University                                          , 0.0177, stderr CI: [0.0157, 0.0198], bootstrapped CI: [0.0157, 0.0198]
+Pacific College of Oriental Medicine                     , 0.01, stderr CI: [0.0049, 0.015], bootstrapped CI: [0.0053, 0.0153]
+Paul Smiths College                                      , 0.0075, stderr CI: [0.0023, 0.0126], bootstrapped CI: [0.0028, 0.0131]
+Plaza College                                            , 0.0065, stderr CI: [0.0008, 0.0122], bootstrapped CI: [0.0013, 0.0131]
+Pratt Institute                                          , 0.0077, stderr CI: [0.0053, 0.0102], bootstrapped CI: [0.0054, 0.0101]
+Rensselaer Polytechnic Institute                         , 0.0211, stderr CI: [0.0182, 0.0239], bootstrapped CI: [0.0182, 0.0239]
+Roberts Wesleyan College                                 , 0.0319, stderr CI: [0.0238, 0.0401], bootstrapped CI: [0.0241, 0.0398]
+Rochester Institute of Technology                        , 0.0198, stderr CI: [0.018, 0.0216], bootstrapped CI: [0.0181, 0.0216]
+Rockefeller University                                   , 0.299, stderr CI: [0.2481, 0.35], bootstrapped CI: [0.2476, 0.3473]
+Rockland Community College                               , 0.011, stderr CI: [0.0086, 0.0133], bootstrapped CI: [0.0085, 0.0134]
+Russell Sage College                                     , 0.0157, stderr CI: [0.0111, 0.0204], bootstrapped CI: [0.011, 0.0208]
+SUNY Albany                                              , 0.0463, stderr CI: [0.0432, 0.0493], bootstrapped CI: [0.0432, 0.0491]
+SUNY Alfred State College of Technology                  , 0.0751, stderr CI: [0.0666, 0.0836], bootstrapped CI: [0.0673, 0.0841]
+SUNY Binghamton                                          , 0.0829, stderr CI: [0.079, 0.0869], bootstrapped CI: [0.079, 0.0868]
+SUNY Brockport                                           , 0.0556, stderr CI: [0.0508, 0.0605], bootstrapped CI: [0.0513, 0.0605]
+SUNY Broome Community College                            , 0.013, stderr CI: [0.0103, 0.0157], bootstrapped CI: [0.0104, 0.0155]
+SUNY Buffalo State                                       , 0.0403, stderr CI: [0.0361, 0.0444], bootstrapped CI: [0.0362, 0.0444]
+SUNY Canton                                              , 0.0334, stderr CI: [0.0274, 0.0395], bootstrapped CI: [0.0279, 0.0396]
+SUNY Cobleskill                                          , 0.0669, stderr CI: [0.0568, 0.077], bootstrapped CI: [0.0566, 0.0772]
+SUNY College at Potsdam                                  , 0.0591, stderr CI: [0.0512, 0.067], bootstrapped CI: [0.0511, 0.0673]
+SUNY College of Environmental Science and Forestry       , 0.0336, stderr CI: [0.0262, 0.041], bootstrapped CI: [0.0265, 0.0416]
+SUNY College of Optometry                                , 0.1544, stderr CI: [0.1193, 0.1895], bootstrapped CI: [0.1176, 0.1912]
+SUNY Corning Community College                           , 0.0108, stderr CI: [0.008, 0.0135], bootstrapped CI: [0.008, 0.0135]
+SUNY Cortland                                            , 0.1844, stderr CI: [0.1752, 0.1936], bootstrapped CI: [0.1754, 0.1938]
+SUNY Delhi                                               , 0.0383, stderr CI: [0.0317, 0.0448], bootstrapped CI: [0.0319, 0.0447]
+SUNY Downstate Health Sciences University                , 0.1174, stderr CI: [0.1029, 0.1319], bootstrapped CI: [0.1032, 0.1327]
+SUNY Empire State College                                , 0.0026, stderr CI: [0.0017, 0.0036], bootstrapped CI: [0.0017, 0.0037]
+SUNY Geneseo                                             , 0.1202, stderr CI: [0.1113, 0.1291], bootstrapped CI: [0.1116, 0.1295]
+SUNY Maritime College                                    , 0.1292, stderr CI: [0.1134, 0.145], bootstrapped CI: [0.1136, 0.1453]
+SUNY Morrisville                                         , 0.0499, stderr CI: [0.0413, 0.0584], bootstrapped CI: [0.041, 0.0579]
+SUNY New Paltz                                           , 0.0541, stderr CI: [0.0492, 0.059], bootstrapped CI: [0.049, 0.059]
+SUNY Old Westbury                                        , 0.0177, stderr CI: [0.0141, 0.0213], bootstrapped CI: [0.0144, 0.0212]
+SUNY Oneonta                                             , 0.1482, stderr CI: [0.1397, 0.1567], bootstrapped CI: [0.1401, 0.1571]
+SUNY Oswego                                              , 0.0725, stderr CI: [0.067, 0.078], bootstrapped CI: [0.0669, 0.0784]
+SUNY Plattsburgh                                         , 0.0844, stderr CI: [0.0772, 0.0915], bootstrapped CI: [0.0775, 0.0916]
+SUNY Polytechnic Institute                               , 0.0152, stderr CI: [0.011, 0.0194], bootstrapped CI: [0.0112, 0.0197]
+SUNY Purchase College                                    , 0.0265, stderr CI: [0.0218, 0.0311], bootstrapped CI: [0.0218, 0.0313]
+SUNY University at Buffalo                               , 0.0299, stderr CI: [0.0281, 0.0317], bootstrapped CI: [0.0281, 0.0318]
+SUNY Westchester Community College                       , 0.0237, stderr CI: [0.021, 0.0265], bootstrapped CI: [0.021, 0.0265]
+SUNY at Fredonia                                         , 0.0888, stderr CI: [0.0802, 0.0974], bootstrapped CI: [0.08, 0.098]
+Saint Elizabeth College of Nursing                       , 0.0766, stderr CI: [0.0404, 0.1127], bootstrapped CI: [0.0431, 0.1148]
+Sarah Lawrence College                                   , 0.0316, stderr CI: [0.0233, 0.04], bootstrapped CI: [0.0245, 0.0394]
+Schenectady County Community College                     , 0.0066, stderr CI: [0.0044, 0.0087], bootstrapped CI: [0.0046, 0.0088]
+Siena College                                            , 0.1408, stderr CI: [0.1296, 0.152], bootstrapped CI: [0.1303, 0.1527]
+Skidmore College                                         , 0.0328, stderr CI: [0.0263, 0.0393], bootstrapped CI: [0.0266, 0.0397]
+Sotheby's Institute of Art                               , 0.0, stderr CI: [0.0, 0.0], bootstrapped CI: [0.0, 0.0]
+St. Bonaventure University                               , 0.1257, stderr CI: [0.1115, 0.1399], bootstrapped CI: [0.1114, 0.1405]
+St. Francis College                                      , 0.0222, stderr CI: [0.017, 0.0274], bootstrapped CI: [0.0174, 0.0277]
+St. John Fisher College                                  , 0.0597, stderr CI: [0.0521, 0.0674], bootstrapped CI: [0.0519, 0.067]
+St. John's University                                    , 0.0309, stderr CI: [0.0285, 0.0332], bootstrapped CI: [0.0284, 0.0332]
+St. Joseph's College Long Island                         , 0.0132, stderr CI: [0.0103, 0.0161], bootstrapped CI: [0.0105, 0.0161]
+St. Joseph's College New York                            , 0.0051, stderr CI: [0.0033, 0.007], bootstrapped CI: [0.0034, 0.0069]
+St. Joseph's College of Nursing                          , 0.0597, stderr CI: [0.0337, 0.0858], bootstrapped CI: [0.0346, 0.0881]
+St. Lawrence University                                  , 0.0448, stderr CI: [0.037, 0.0525], bootstrapped CI: [0.0371, 0.0524]
+St. Thomas Aquinas College                               , 0.0679, stderr CI: [0.0578, 0.078], bootstrapped CI: [0.0583, 0.0788]
+Stony Brook University                                   , 0.038, stderr CI: [0.0359, 0.0402], bootstrapped CI: [0.0359, 0.0401]
+Suffolk County Community College                         , 0.0126, stderr CI: [0.0112, 0.0139], bootstrapped CI: [0.0112, 0.0139]
+Sullivan County Community College                        , 0.0073, stderr CI: [0.0032, 0.0115], bootstrapped CI: [0.0037, 0.0116]
+Swedish Institute a College of Health Sciences           , 0.0113, stderr CI: [0.0035, 0.0192], bootstrapped CI: [0.0043, 0.0199]
+Syracuse University                                      , 0.0724, stderr CI: [0.0693, 0.0755], bootstrapped CI: [0.0693, 0.0756]
+The College of Saint Rose                                , 0.0441, stderr CI: [0.0378, 0.0503], bootstrapped CI: [0.0378, 0.05]
+The College of Westchester                               , 0.0113, stderr CI: [0.0047, 0.018], bootstrapped CI: [0.0051, 0.0185]
+The Graduate Center, CUNY                                , 0.0105, stderr CI: [0.0079, 0.0131], bootstrapped CI: [0.008, 0.013]
+The King's College                                       , 0.0077, stderr CI: [0.0044, 0.011], bootstrapped CI: [0.0044, 0.011]
+The New School                                           , 0.0114, stderr CI: [0.0096, 0.0133], bootstrapped CI: [0.0095, 0.0134]
+Tompkins Cortland Community College                      , 0.0256, stderr CI: [0.0196, 0.0316], bootstrapped CI: [0.02, 0.032]
+Touro College                                            , 0.0057, stderr CI: [0.0043, 0.0071], bootstrapped CI: [0.0043, 0.0072]
+Trocaire College                                         , 0.0669, stderr CI: [0.0533, 0.0805], bootstrapped CI: [0.0538, 0.0808]
+Ulster County Community College                          , 0.0048, stderr CI: [0.0026, 0.007], bootstrapped CI: [0.0027, 0.0072]
+Union College                                            , 0.1257, stderr CI: [0.1124, 0.1389], bootstrapped CI: [0.1128, 0.1389]
+United States Merchant Marine Academy                    , 0.0046, stderr CI: [0.0006, 0.0086], bootstrapped CI: [0.0009, 0.0091]
+United States Military Academy West Point                , 0.0747, stderr CI: [0.067, 0.0825], bootstrapped CI: [0.0668, 0.0823]
+University of Rochester                                  , 0.009, stderr CI: [0.0081, 0.0099], bootstrapped CI: [0.0082, 0.01]
+Upstate Medical University                               , 0.2546, stderr CI: [0.2365, 0.2727], bootstrapped CI: [0.238, 0.2726]
+Utica College                                            , 0.0527, stderr CI: [0.0461, 0.0592], bootstrapped CI: [0.0459, 0.0594]
+Vassar College                                           , 0.0697, stderr CI: [0.0603, 0.0792], bootstrapped CI: [0.0601, 0.0787]
+Vaughn College of Aeronautics and Technology             , 0.1249, stderr CI: [0.1086, 0.1412], bootstrapped CI: [0.1091, 0.1414]
+Villa Maria College                                      , 0.0631, stderr CI: [0.0461, 0.08], bootstrapped CI: [0.0467, 0.0794]
+Wagner College                                           , 0.0605, stderr CI: [0.0508, 0.0703], bootstrapped CI: [0.051, 0.071]
+Webb Institute                                           , 0.0278, stderr CI: [-0.0034, 0.0589], bootstrapped CI: [0.0, 0.0648]
+Weill Cornell Medical College                            , 0.0287, stderr CI: [0.0218, 0.0357], bootstrapped CI: [0.022, 0.0359]
+Wells College                                            , 0.0337, stderr CI: [0.0188, 0.0486], bootstrapped CI: [0.0195, 0.0496]
+Word of Life Bible Institute                             , 0.0246, stderr CI: [0.0114, 0.0379], bootstrapped CI: [0.0133, 0.0379]
+Yeshiva University                                       , 0.01, stderr CI: [0.0081, 0.0118], bootstrapped CI: [0.0082, 0.0119]

@@ -1,0 +1,92 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx}
+
+\title{CSE 357 - HW 1}
+\author{Andrew Sun}
+\date{September 5 2021}
+
+
+\begin{document}
+	\begin{titlepage}
+		\maketitle
+	\end{titlepage}
+	\begin{enumerate}
+		\item \textbf{Dice Dependence (16 points).} You roll two fair
+		6-sided dice ($D1$ and $D2$).
+		\begin{enumerate}
+			\item Which of the following are independent?\\
+			$D1=6,D1+D2=5$\\
+			$D1=5,D1+D2=6$\\
+			$D1=4,D1+D2=7$\\
+			None of the above\\
+			\textbf{Answer:} $D1=4,D1+D2=7$ are independent events.
+			\item Why? (show your work)\\
+			\textbf{Answer:} For the first case $D1=6, D1+D2=5$, $D1$ is already
+			greater than 5, and $D2$ cannot be negative. Therefore the two events
+			here are mutually exclusive and thus cannot be independent.
+			
+			For the second case $D1=5,D1+D2=6$, the probability that $D1+D2=6$ is
+			equal to $\frac{5}{36}$. However, given that $D1$ has to be equal to $5$,
+			the probability that $D1+D2=6$ becomes $\frac{1}{6}$ as there is only
+			$1$ value $D2$ can take - $1$ - in order to satisfy the equality.
+			Therefore since the probability changes when $D1$ is set to 5,
+			the two events cannot be independent.
+			
+			For the third case $D1=4,D1+D2=7$, the probability that $D1+D2=7$ is
+			equal to $\frac{6}{36}=\frac{1}{6}$. However, given that $D1$ has to
+			be equal to $4$, the probability that $D1+D2=6$ remains the same at
+			$\frac{1}{6}$ due to 1 out of six possible values for $D2$ - $3$ - satisfying
+			the equality $D1 + D2 = 7$. Therefore since the probability remains the same
+			when $D1$ is set to $4$, the two events are independent.
+		\end{enumerate}
+		\item \textbf{Conditionally Independent Mining? (24 points)}
+		Suppose you are given five mines that may or may not contain
+		gold, and based on stories you hear of all mines in the area
+		you assume there is a 50\% probability that any single mine
+		has gold.
+		\begin{enumerate}
+			\item Under this assumption, what is the probability that
+			all five mines have gold?\\
+			\textbf{Answer:} The probability that all five mines have gold
+			is equal to $(0.5)^5=0.03125$.
+			\item Suppose you learn that at least one mine has gold.
+			Given only this additional information, what is the
+			probability that all five contain gold? (show your work)\\
+			\textbf{Answer:} We can use Bayes' theorem: $P(A|B)=P(A \cap B) / P(B)$.
+			We let event A be the event where all five mines contain
+			gold. We let event B be the event where at least one
+			mine has gold. $P(A\cap B) = P(A)$ because $P(A)\subset P(B)$,
+			or the set of all events where at least one mine has gold
+			includes all the events where all 5 mines have gold.
+			We then divide $P(A)$, $0.03125$, by $P(B)=1-0.03125$ (the probability
+			that no mines have gold subtracted from 1), to get
+			our final answer of $0.03225806451612903$.
+			\item Your friend is also given 5 mines (ignore all
+			information above). They are all along a road leading
+			out of town. You learn that \textunderscore{only} one
+			of these mines has gold.
+			Your friend knows which mine it is and asks you to guess.
+			suggesting he might share some of it if you get it right
+			(fun friend!). You guess the mine closest to town,
+			what is the probability that you are right?\\
+			\textbf{Answer:} The probability that the mine closest
+			to town has gold is equal to $\frac{1}{5}=0.2$.
+			\item Annoyingly, your friend won’t tell you whether
+			you’re right! Instead, he reveals that it’s not the
+			mine furthest from town. Should you change your answer?
+			Why or why not? (explain probabilistically)\\
+			\textbf{Answer:} The answer should \textbf{not} be changed because
+			given the removal of the mine furthest from the town,
+			the probabilities that each remaining mine is the one that
+			contains gold remain the same with respect to each other,
+			and thus it would not necessarily be advantageous if
+			the answer was changed.\\
+			It would only make sense to change
+			the answer if it was \textit{explicitly} stated that there was a shift
+			in probabilities of the remaining mines such that one had
+			a greater probability of containing gold than the others.
+		\end{enumerate}
+	\end{enumerate}
+\end{document}

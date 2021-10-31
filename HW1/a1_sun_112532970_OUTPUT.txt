@@ -1,0 +1,32 @@
+P(D1 = 6) = 0.167222
+P(D1 + D2 = 5) = 0.110943
+P(D1 = 6) * P(D1 + D2 = 5) = 0.018552
+P(D1 = 6, D1 + D2 = 5) = 0.000000
+P(D1 = 6) * P(D1 + D2 = 5) ≠ P(D1 = 6, D1 + D2 = 5)
+
+P(D1 = 5) = 0.166758
+P(D1 + D2 = 6) = 0.138757
+P(D1 = 5) * P(D1 + D2 = 6) = 0.023139
+P(D1 = 5, D1 + D2 = 6) = 0.027543
+P(D1 = 5) * P(D1 + D2 = 6) ≠ P(D1 = 5, D1 + D2 = 6)
+
+P(D1 = 4) = 0.166386
+P(D1 + D2 = 7) = 0.166520
+P(D1 = 4) * P(D1 + D2 = 7) = 0.027707
+P(D1 = 4, D1 + D2 = 7) = 0.027791
+P(D1 = 4) * P(D1 + D2 = 7) ≈ P(D1 = 4, D1 + D2 = 7)
+
+# Our normal distribution's pdf will be plotted here.
+
+# Our normal distribution's cdf will be plotted here.
+
+The probability that the phone will die before 39.5 hours but after 34 hours: 0.25526627445811234
+Density value is 0.0449476278806365
+total # of hours you insist she should text by from hour 0 (assuming 95% confidence that your phone won't be dead by then): 35.5308932512864
+She should text you by 1.5308932512864004 hours.
+Probability phone dies while you're hanging out with friend: 0.13222848845959065
+
+# Our normal distribution's cdf will be plotted here with x-axis ranging
+# from the variable hours + 0.5 to hours + 3.
+
+# Our gaussian kernel density estimation of randKumaraswamy() will be plotted lastly.
