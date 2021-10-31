@@ -47,6 +47,19 @@ def covariance(arr1, arr2):
     sum += (arr1[i] - m1) * (arr2[i] - m2)
   return sum / (n - 1)
 
+# returns the slope of a regression line given two arrays
+# and a pearson correlation coefficient.
+def slope(x_data, y_data, r):
+  return r * (sampleStd(y_data) / sampleStd(x_data))
+
+# returns the y-intercept of a regression line given two arrays
+# and a pearson correlation coefficient.
+def yIntercept(x_data, y_data, r):
+  return mean(y_data) - slope(x_data, y_data, r) * mean(x_data)
+
+def rFromSlope(slope, x_data, y_data):
+  return slope * sampleStd(x_data) / sampleStd(y_data)
+
 # residual sum of squares
 def rss(arr, arrhat):
   try:
@@ -73,9 +86,52 @@ def x_times_rs(xarr, yarr, yarrhat):
     sum = sum + (xarr[i] * (yarrhat[i] - yarr[i]))
   return sum
 
-# gradient descent algorithm
-def grad_descent():
-  return
+# gradient descent algorithm, returns the slope
+# and y-intercept respectively of the linear regression
+# equation
+def grad_descent(x_data, y_data):
+  prev_b0 = -1
+  prev_b1 = -1
+  b0 = 0
+  b1 = 0
+  alpha = 0.001
+  amountDividedBy = 1
+  prev_rss = np.inf
+  current_rss = np.inf
+  done = False
+  i0 = 0
+  overFlowStep = -1
+  while(done == False):
+    yhat_data = [b0 + b1 * x for x in x_data]
+    prev_rss = current_rss
+    current_rss = rss(y_data, yhat_data)
+    #print(i0, ". current_rss is", current_rss)
+    if (current_rss > prev_rss):
+      overFlowStep = i0
+      alpha /= 10
+      amountDividedBy *= 10
+      b0 = prev_b0
+      b1 = prev_b1
+      #print("alpha is now", alpha)
+      continue
+    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.001):
+      done = True
+      break
+    prev_b0 = b0
+    prev_b1 = b1
+    b0 = b0 - alpha * rs(y_data, yhat_data)
+    b1 = b1 - alpha * x_times_rs(x_data, y_data, yhat_data)
+    if (i0 - overFlowStep >= 5):
+      alpha = 0.001
+      amountDividedBy = 1
+
+    i0 += 1
+  # calculate r by multiplying b1 by
+  # the standard deviation of y_data (alcohol)
+  # over the standard deviation of x_data.
+  #r = b1 * sampleStd(x_data) / sampleStd(y_data)
+  #print("r " + str(i) + " is", r)
+  return (b1, b0)
 
 # Part 1
 def part1():
@@ -109,7 +165,8 @@ def part1():
     cov_data = covariance(x_data, y_data)
     print("covariance is ", cov_data)
     x_std = sampleStd(x_data)
-    print("Correlation coefficient r" + str(i), "is", cov_data / (x_std * alc_std))
+    r = cov_data / (x_std * alc_std)
+    print("Correlation coefficient r" + str(i), "is", r)
 
 
   # C. Correlate alcohol with the other 12
@@ -121,56 +178,18 @@ def part1():
   # predictor. Print the 12 correlations.
   print("\nPart 1 C:\n")
   for i in range(1, 13):
-    prev_b0 = -1
-    prev_b1 = -1
-    b0 = 0
-    b1 = 0
-    alpha = 0.001
-    amountDividedBy = 1
-    prev_rss = np.inf
-    current_rss = np.inf
     x_data = wines.data[:,i]
-    done = False
-    i0 = 0
-    overFlowStep = -1
-    while(done == False):
-      yhat_data = [b0 + b1 * x for x in x_data]
-      prev_rss = current_rss
-      current_rss = rss(y_data, yhat_data)
-      #print(i0, ". current_rss is", current_rss)
-      if (current_rss > prev_rss):
-        overFlowStep = i0
-        alpha /= 10
-        amountDividedBy *= 10
-        b0 = prev_b0
-        b1 = prev_b1
-        #print("alpha is now", alpha)
-        continue
-      if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.001):
-        done = True
-        break
-      prev_b0 = b0
-      prev_b1 = b1
-      b0 = b0 - alpha * rs(y_data, yhat_data)
-      b1 = b1 - alpha * x_times_rs(x_data, y_data, yhat_data)
-      if (i0 - overFlowStep >= 5):
-        alpha = 0.001
-        amountDividedBy = 1
-
-      i0 += 1
-    # calculate r by multiplying b1 by
-    # the standard deviation of y_data (alcohol)
-    # over the standard deviation of x_data.
-    r = b1 * sampleStd(x_data) / sampleStd(y_data)
-    print("r " + str(i) + " is", r)
-    #x_space = np.linspace(min(x_data) - 1, max(x_data) + 1, 50)
-    #plt.plot(x_space, x_space * b1 + b0)
-    #plt.scatter(x_data, y_data, c='orange', label='data', alpha=0.8)
-    #plt.xlabel("x_data")
-    #plt.ylabel("alcohol")
-    #plt.title("intensity effect on alcohol")
-    #plt.legend()
-    #plt.show()
+    b1, b0 = grad_descent(x_data, y_data)
+    r = rFromSlope(b1, x_data, y_data)
+    print("r" + str(i) + " is", r)
+    x_space = np.linspace(min(x_data) - 1, max(x_data) + 1, 50)
+    plt.plot(x_space, x_space * b1 + b0)
+    plt.scatter(x_data, y_data, c='orange', label='data', alpha=0.8)
+    plt.xlabel("x_data")
+    plt.ylabel("alcohol")
+    plt.title("intensity effect on alcohol")
+    plt.legend()
+    plt.show()
 
   # D. Relate all 12 attributes to alcohol at once
   # using multiple linear regression. Fit a multiple
