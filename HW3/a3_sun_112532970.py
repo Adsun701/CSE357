@@ -19,9 +19,11 @@ np.seterr(all='raise')
 
 #print('(is_class1, target)', list(zip(is_class1[:5], #wines.target[:5])))
 
+# returns the mean of an array.
 def mean(arr):
     return sum(arr) / len(arr)
 
+# returns the sample variance of an array.
 def sampleVar(arr):
     n = len(arr)
     s = 0
@@ -30,6 +32,7 @@ def sampleVar(arr):
         s += (arr[i] - m) ** 2
     return (1 / (n - 1)) * s
 
+# returns the sample standard deviation of an array.
 def sampleStd(arr):
     return sampleVar(arr) ** 0.5
 
@@ -70,6 +73,10 @@ def x_times_rs(xarr, yarr, yarrhat):
     sum = sum + (xarr[i] * (yarrhat[i] - yarr[i]))
   return sum
 
+# gradient descent algorithm
+def grad_descent():
+  return
+
 # Part 1
 def part1():
   # A: Generate a scatter plot between alcohol
@@ -77,7 +84,7 @@ def part1():
   # data variable (data[:,0]) and colour
   # intensity is the 10th (data[:,9]).
   # Copy the plot to your output document.
-  print("\nPART A:\n")
+  print("\nPART 1 A:\n")
   intensity = wines.data[:,9]
   y_data = wines.data[:,0]
   x_space = np.linspace(min(intensity) - 1, max(intensity) + 1, 50)
@@ -95,14 +102,14 @@ def part1():
   # between alcohol (data[:,0]) and the other
   # variable (data[:,i] where i ∊ [1, 12]).
   # Print the 12 correlations.
-  print("\nPart B:\n")
+  print("\nPart 1 B:\n")
   alc_std = sampleStd(y_data)
   for i in range(1, 13):
-    second_data = wines.data[:,i]
-    cov_data = covariance(second_data, y_data)
+    x_data = wines.data[:,i]
+    cov_data = covariance(x_data, y_data)
     print("covariance is ", cov_data)
-    second_std = sampleStd(second_data)
-    print("Correlation coefficient r" + str(i), "is", cov_data / (alc_std * second_std))
+    x_std = sampleStd(x_data)
+    print("Correlation coefficient r" + str(i), "is", cov_data / (x_std * alc_std))
 
 
   # C. Correlate alcohol with the other 12
@@ -112,7 +119,7 @@ def part1():
   # Product-Moment Correlation Coefficient), one
   # must standardize both the outcome and the
   # predictor. Print the 12 correlations.
-  print("\nPart C:\n")
+  print("\nPart 1 C:\n")
   for i in range(1, 13):
     prev_b0 = -1
     prev_b1 = -1
@@ -174,6 +181,7 @@ def part1():
   # and (2) where none of the variables are standardized.
   # Print the coefficients for all 12 variables as well
   # as the value of the intercept (ꞵ0) for both versions.
+  print("\nPart 1 D:\n")
 
   # E. Test coefficient from I.C. for significance.
   # Use the t-test of regression coefficients to find
@@ -181,12 +189,14 @@ def part1():
   # the standardized (1) and non-standardized (2)
   # versions, print the original p-values as well
   # as Bonferonni corrected p-values.
+  print("\nPart 1 E:\n")
 
 # Part 2
 def part2():
   # A. Generate a scatter plot between is_class1 and
   # colour intensity. Colour intensity is the 10th
   # (data[:,9]). Copy the plot to your output document.
+  print("\nPart 2 A:\n")
   intensity = wines.data[:,9]
   x_space = np.linspace(min(intensity) - 1, max(intensity) + 1, 50)
   plt.scatter(intensity, is_class1, c='orange', label='data', alpha=0.5)
@@ -199,6 +209,7 @@ def part2():
   # B. Relate is_class1 with the other 13 attributes,
   # independently, using standardized logistic
   # regression.  Print the 12 coefficients.
+  print("\nPart 2 B:\n")
 
   # C. Relate all 13 attributes to is_class1 at once
   # using multiple logistic regression. Fit a multiple
@@ -210,6 +221,7 @@ def part2():
   # the variables are standardized.  Print the
   # coefficients for all 12 variables as well as
   # the value of the intercept (ꞵ0) for both versions.
+  print("\nPart 2 C:\n")
 
   return
 
@@ -218,6 +230,7 @@ def part3():
   # A. Setup your data for cross-validation. Use
   # sklearns train test split to make a random 80%
   # train and the remaining 20% test.
+  print("\nPart 3 A:\n")
 
   # B. Predict alcohol content from the other 12
   # variables using a linear model.  Fit a linear
@@ -227,13 +240,15 @@ def part3():
   # penalties for L2 regularized version. Print both
   # the mean sequared error and the Pearson correlation
   # between your predictions and the ytest.
+  print("\nPart 3 B:\n")
+
   return
 
 # main
 def main():
   part1()
   part2()
-  # part3()
+  part3()
 
 
 if __name__=="__main__":
