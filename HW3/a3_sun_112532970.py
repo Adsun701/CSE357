@@ -344,6 +344,23 @@ def part3():
   # between your predictions and the ytest.
   print("\nPart 3 B:\n")
 
+  # C. Setup your data for cross-validation with is_class1.
+  # Make a random 80% train and the final 20% test as follows:
+  print("\nPart 3 C:\n")
+
+  # D. Predict is_class1 from the 13 attributes variables
+  # using logistic regression.  Fit a logistic regression model
+  # to the training data to predict is_class1 (ytrain) from the
+  # other variables (Xtrain), with and without L2 regularization.
+  # Try a few penalties for L2 regularized version and choose the
+  # best. Print the following metrics for both versions:
+  # -> log loss
+  # -> precision (positive predictive value)
+  # -> recall (sensitivity;  true positive rate)
+  # -> f1 value
+  # -> specificity (true negative rate)
+  print("\nPart 3 D:\n")
+
   return
 
 # main
