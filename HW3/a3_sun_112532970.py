@@ -106,7 +106,6 @@ def grad_descent(x_data, y_data):
     yhat_data = [b0 + b1 * x for x in x_data]
     prev_rss = current_rss
     current_rss = rss(y_data, yhat_data)
-    #print(i0, ". current_rss is", current_rss)
     if (current_rss > prev_rss):
       timesOverflowed += 1
       overFlowStep = i0
@@ -116,7 +115,6 @@ def grad_descent(x_data, y_data):
         timesOverflowed = 0
       b0 = prev_b0
       b1 = prev_b1
-      #print("alpha is now", alpha)
       continue
     if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.000001):
       done = True
@@ -133,12 +131,65 @@ def grad_descent(x_data, y_data):
       alpha *= 10
 
     i0 += 1
-  # calculate r by multiplying b1 by
-  # the standard deviation of y_data (alcohol)
-  # over the standard deviation of x_data.
-  #r = b1 * sampleStd(x_data) / sampleStd(y_data)
-  #print("r " + str(i) + " is", r)
   return (b1, b0)
+
+
+def gdm_update_yhat_data(b0, b1s, x_datas):
+  yhat_data = [0] * len(x_datas[0])
+  for i in range(len(yhat_data)):
+    s = 0
+    for j in range(len(x_datas)):
+      s += b1s[j] * x_datas[j][i]
+    yhat_data[i] = s
+  return yhat_data
+
+# gradient descent algorithm for multiple linear regression,
+# x_datas is a 2D array
+def grad_descent_multi(x_datas, y_data):
+  num_of_predictors = len(x_datas)
+  prev_b0 = -1
+  prev_b1s = [-1] * num_of_predictors
+  b0 = 0
+  b1s = [0] * num_of_predictors
+  alpha = 0.000001
+  timesDivided = 0
+  timesOverflowed = 0
+  prev_rss = np.inf
+  current_rss = np.inf
+  done = False
+  i0 = 0
+  overFlowStep = -1
+  while(done == False):
+    yhat_data = gdm_update_yhat_data(b0, b1s, x_datas)
+    prev_rss = current_rss
+    current_rss = rss(y_data, yhat_data)
+    if (current_rss > prev_rss):
+      timesOverflowed += 1
+      overFlowStep = i0
+      alpha /= 10
+      if (timesOverflowed < 3):
+        timesDivided += 1
+        timesOverflowed = 0
+      b0 = prev_b0
+      b1s = prev_b1s.copy()
+      continue
+    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.000001):
+      done = True
+      break
+    prev_b0 = b0
+    prev_b1s = b1s.copy()
+    b0 = b0 - alpha * rs(y_data, yhat_data)
+    for i in range(num_of_predictors):
+      b1s[i] = b1s[i] - alpha * x_times_rs(x_datas[i], y_data, yhat_data)
+    if (overFlowStep > 0 and i0 - overFlowStep >= 5 and timesDivided > 0):
+      alpha *= 10
+      timesDivided -= 1
+      if (timesDivided == 0): overFlowStep = -1
+    elif (i0 % 20 == 0):
+      alpha *= 10
+
+    i0 += 1
+  return (b1s, b0)
 
 # Part 1
 def part1():
@@ -206,6 +257,33 @@ def part1():
   # Print the coefficients for all 12 variables as well
   # as the value of the intercept (ꞵ0) for both versions.
   print("\nPart 1 D:\n")
+  print("When all variables are STANDARDIZED")
+  x_datas = []
+  for i in range(1, 13):
+    x_data = wines.data[:,i]
+    xMean = mean(x_data)
+    sx = sampleStd(x_data)
+    x_data_mod = [(x - xMean) / sx for x in x_data]
+    x_datas.append(x_data_mod)
+  yMean = mean(y_data)
+  sy = sampleStd(y_data)
+  y_data_mod = [(y - yMean) / sy for y in y_data]
+  b1s, b0 = grad_descent_multi(x_datas, y_data_mod)
+  correlation_coeffs = b1s
+  for i in range(len(correlation_coeffs)):
+    print("Correlation coefficient r" + str(i + 1) + " is", correlation_coeffs[i])
+  print("Y-intercept is", b0)
+
+  print("\nWithout standardization")
+  b1s = [0] * len(x_datas)
+  s = 0
+  for i in range(len(b1s)):
+    b1s[i] = slope(x_datas[i], y_data, correlation_coeffs[i])
+    s += b1s[i] * mean(x_datas[i])
+  b0 = mean(y_data) - s
+  for i in range(len(b1s)):
+    print("b" + str(i + 1) + " is", b1s[i])
+  print("Y-intercept is", b0)
 
   # E. Test coefficient from I.C. for significance.
   # Use the t-test of regression coefficients to find
