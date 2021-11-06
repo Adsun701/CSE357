@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import csv
 import time
 
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+
 from sklearn.datasets import load_wine
 wines = load_wine()
 
@@ -308,10 +311,29 @@ def part2():
   plt.legend()
   plt.show()
 
+  y_data = np.array(is_class1)
+
   # B. Relate is_class1 with the other 13 attributes,
   # independently, using standardized logistic
   # regression.  Print the 12 coefficients.
   print("\nPart 2 B:\n")
+  for i in range(0, 13):
+    x_data = np.array(wines.data[:,i]).reshape(-1, 1)
+    model = LogisticRegression()
+    model.fit(x_data, y_data)
+    b0 = model.intercept_[0]
+    b1 = model.coef_[0][0]
+    print("coefficient " + str(i + 1) + " is " + str(b1))
+
+   # x = np.linspace(min(x_data) - 1, max(x_data) + 1, 50)
+   # plt.scatter(x_data, y_data, c='orange', label='data', alpha=0.5)
+   # plt.plot(x, (np.e ** (b0 + b1 * x)) / (1 + np.e **(b0 + b1 * x)))
+   # plt.xlabel("x_data")
+   # plt.ylabel("is_class1")
+   # plt.title("x effect on is_class1")
+   # plt.legend()
+   # plt.show()
+
 
   # C. Relate all 13 attributes to is_class1 at once
   # using multiple logistic regression. Fit a multiple
@@ -324,6 +346,37 @@ def part2():
   # coefficients for all 12 variables as well as
   # the value of the intercept (ꞵ0) for both versions.
   print("\nPart 2 C:\n")
+  x_data = np.array([])
+  n = len(wines.data[:,0])
+  for i in range(0, 13):
+    data = StandardScaler().fit_transform(np.reshape(np.array(wines.data[:,i]), (-1, 1)))
+    data = np.reshape(data, (1, -1))
+    x_data = np.append(x_data, data)
+  x_data = np.transpose(np.reshape(x_data, (13, n)))
+
+  # with standardization
+  print("WITH STANDARDIZATION:")
+  model = LogisticRegression(multi_class='multinomial', max_iter=10000, solver='saga')
+  model.fit(x_data, y_data)
+  b0 = model.intercept_[0]
+  b1 = model.coef_[0]
+  print("Model intercept: ", b0)
+  print("Model coefficients: ", b1)
+
+  # without standardization
+  print("WITHOUT STANDARDIZATION:")
+  x_data = np.array([])
+  n = len(wines.data[:,0])
+  for i in range(0, 13):
+    x_data = np.append(x_data, np.array(wines.data[:,i]))
+  x_data = np.transpose(np.reshape(x_data, (13, n)))
+
+  model = LogisticRegression(multi_class='multinomial', max_iter=10000, solver='saga')
+  model.fit(x_data, y_data)
+  b0 = model.intercept_[0]
+  b1 = model.coef_[0]
+  print("Model intercept: ", b0)
+  print("Model coefficients: ", b1)
 
   return
 
