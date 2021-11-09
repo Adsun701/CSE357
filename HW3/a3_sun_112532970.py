@@ -189,6 +189,14 @@ def grad_descent_log(x_data, y_data):
     i0 += 1
   return (b1, b0)
 
+def gdm_update_yhat_data(b0, b1s, x_datas):
+  yhat_data = [0] * len(x_datas[0])
+  for i in range(len(yhat_data)):
+    s = 0
+    for j in range(len(x_datas)):
+      s += b1s[j] * x_datas[j][i]
+    yhat_data[i] = s
+  return yhat_data
 
 def gdm_log_update_yhat_data(b0, b1s, x_datas):
   yhat_data = [0] * len(x_datas[0])
