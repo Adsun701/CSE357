@@ -379,9 +379,9 @@ def part1():
     x_datas.append(x_data_mod)
   y_data_mod = standardize(y_data)
   b1s, b0 = grad_descent_multi(x_datas, y_data_mod)
-  correlation_coeffs = b1s
-  for i in range(len(correlation_coeffs)):
-    print("Correlation coefficient r" + str(i + 1) + " is", correlation_coeffs[i])
+  cc1 = b1s
+  for i in range(len(cc1)):
+    print("Correlation coefficient r" + str(i + 1) + " is", cc1[i])
   print("Y-intercept is", b0)
 
   print("\nWithout standardization")
@@ -392,18 +392,21 @@ def part1():
     sx = sampleStd(x_data)
     x_datas.append(x_data)
   b1s, b0 = grad_descent_multi(x_datas, y_data)
-  correlation_coeffs = b1s
-  for i in range(len(correlation_coeffs)):
-    print("Correlation coefficient b" + str(i + 1) + " is", correlation_coeffs[i])
+  cc2 = b1s
+  for i in range(len(cc2)):
+    print("Correlation coefficient b" + str(i + 1) + " is", cc2[i])
   print("Y-intercept is", b0)
 
-  # E. Test coefficient from 1.D. for significance.
+  # E. Test coefficients from 1.D. for significance.
   # Use the t-test of regression coefficients to find
   # the p-value for each coefficient from 1.D. For both
   # the standardized (1) and non-standardized (2)
   # versions, print the original p-values as well
   # as Bonferonni corrected p-values.
   print("\nPart 1 E:\n")
+  # original p-values for standardized coefficients
+
+
 
 # Part 2
 def part2():
@@ -430,16 +433,6 @@ def part2():
     x_data = standardize(wines.data[:,i])
     b1, b0 = grad_descent_log(x_data, y_data)
     print("coefficient " + str(i + 1) + " is " + str(b1))
-
-    #x = np.linspace(min(x_data) - 1, max(x_data) + 1, 50)
-    #plt.scatter(x_data, y_data, c='orange', label='data', alpha=0.5)
-    #plt.plot(x, (np.e ** (b0 + b1 * x)) / (1 + np.e **(b0 + b1 * x)))
-    #plt.xlabel("x_data")
-    #plt.ylabel("is_class1")
-    #plt.title("x effect on is_class1")
-    #plt.legend()
-    #plt.show()
-
 
   # C. Relate all 13 attributes to is_class1 at once
   # using multiple logistic regression. Fit a multiple
@@ -485,6 +478,11 @@ def part3():
   # sklearns train test split to make a random 80%
   # train and the remaining 20% test.
   print("\nPart 3 A:\n")
+  from sklearn.model_selection import train_test_split
+
+  Xtrain, Xtest, ytrain, ytest = \
+    train_test_split(wines.data[:,1:], wines.data[:,0], test_size=0.20, random_state=42)
+  print("Xs: ", Xtrain.shape, Xtest.shape, ";  ys: ", ytrain.shape, ytest.shape)
 
   # B. Predict alcohol content from the other 12
   # variables using a linear model.  Fit a linear
@@ -499,6 +497,8 @@ def part3():
   # C. Setup your data for cross-validation with is_class1.
   # Make a random 80% train and the final 20% test as follows:
   print("\nPart 3 C:\n")
+  Xtrain, Xtest, ytrain, ytest = train_test_split(wines.data, is_class1, test_size=0.20, random_state=42)
+  print("Xs: ", Xtrain.shape, Xtest.shape, ";  ys: ", ytrain.shape, ytest.shape)
 
   # D. Predict is_class1 from the 13 attributes variables
   # using logistic regression.  Fit a logistic regression model
