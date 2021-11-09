@@ -377,8 +377,6 @@ def part1():
     sx = sampleStd(x_data)
     x_data_mod = standardize(x_data)
     x_datas.append(x_data_mod)
-  yMean = mean(y_data)
-  sy = sampleStd(y_data)
   y_data_mod = standardize(y_data)
   b1s, b0 = grad_descent_multi(x_datas, y_data_mod)
   correlation_coeffs = b1s
@@ -387,19 +385,21 @@ def part1():
   print("Y-intercept is", b0)
 
   print("\nWithout standardization")
-  b1s = [0] * len(x_datas)
-  s = 0
-  for i in range(len(b1s)):
-    b1s[i] = slope(x_datas[i], y_data, correlation_coeffs[i])
-    s += b1s[i] * mean(x_datas[i])
-  b0 = mean(y_data) - s
-  for i in range(len(b1s)):
-    print("b" + str(i + 1) + " is", b1s[i])
+  x_datas = []
+  for i in range(1, 13):
+    x_data = wines.data[:,i]
+    xMean = mean(x_data)
+    sx = sampleStd(x_data)
+    x_datas.append(x_data)
+  b1s, b0 = grad_descent_multi(x_datas, y_data)
+  correlation_coeffs = b1s
+  for i in range(len(correlation_coeffs)):
+    print("Correlation coefficient b" + str(i + 1) + " is", correlation_coeffs[i])
   print("Y-intercept is", b0)
 
-  # E. Test coefficient from I.C. for significance.
+  # E. Test coefficient from 1.D. for significance.
   # Use the t-test of regression coefficients to find
-  # the p-value for each coefficient from I.C. For both
+  # the p-value for each coefficient from 1.D. For both
   # the standardized (1) and non-standardized (2)
   # versions, print the original p-values as well
   # as Bonferonni corrected p-values.
