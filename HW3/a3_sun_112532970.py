@@ -137,7 +137,7 @@ def grad_descent(x_data, y_data):
       alpha *= 10
 
     i0 += 1
-  return (b1, b0)
+  return (b1, b0, current_rss)
 
 def sigmoid(x, b0, b1):
   return (np.e ** (b0 + b1 * x)) / (1 + np.e **(b0 + b1 * x))
@@ -253,7 +253,7 @@ def grad_descent_multi(x_datas, y_data):
       alpha *= 10
 
     i0 += 1
-  return (b1s, b0)
+  return (b1s, b0, current_rss)
 
 # gradient descent algorithm for multinomial
 # log regression, x_datas is a 2D array
@@ -355,7 +355,7 @@ def part1():
     x_data_mod = standardize(x_data)
     y_data_mod = standardize(y_data)
 
-    b1, b0 = grad_descent(x_data_mod, y_data_mod)
+    b1, b0, rss = grad_descent(x_data_mod, y_data_mod)
     r = b1
     print("Correlation coefficient r" + str(i), "is", r)
 
@@ -378,11 +378,12 @@ def part1():
     x_data_mod = standardize(x_data)
     x_datas.append(x_data_mod)
   y_data_mod = standardize(y_data)
-  b1s, b0 = grad_descent_multi(x_datas, y_data_mod)
-  cc1 = b1s
+  b1s, b0, rss = grad_descent_multi(x_datas, y_data_mod)
+  cc1 = b1s # standardized coefficients
   for i in range(len(cc1)):
     print("Correlation coefficient r" + str(i + 1) + " is", cc1[i])
   print("Y-intercept is", b0)
+  x_datas_standardized = x_datas
 
   print("\nWithout standardization")
   x_datas = []
@@ -391,8 +392,8 @@ def part1():
     xMean = mean(x_data)
     sx = sampleStd(x_data)
     x_datas.append(x_data)
-  b1s, b0 = grad_descent_multi(x_datas, y_data)
-  cc2 = b1s
+  b1s, b0, _ = grad_descent_multi(x_datas, y_data)
+  cc2 = b1s # non-standardized coefficients
   for i in range(len(cc2)):
     print("Correlation coefficient b" + str(i + 1) + " is", cc2[i])
   print("Y-intercept is", b0)
@@ -404,7 +405,26 @@ def part1():
   # versions, print the original p-values as well
   # as Bonferonni corrected p-values.
   print("\nPart 1 E:\n")
+  # get N
+  n = len(y_data) # should be 178
+  m = len(x_datas_standardized) # should be 12
+  df = n - (m + 1)
+  v = rss / df
   # original p-values for standardized coefficients
+  for i in range(m):
+    x_data = x_datas_standardized[i]
+    mu = mean(x_data)
+    s = sum([(x - mu) ** 2 for x in x_data])
+    t = cc1[i] / (v / s) ** 0.5
+    if (t < 0):
+      p = ss.t.cdf(t, df)
+    else:
+      p = 1 - ss.t.cdf(t, df)
+    print("t for b" + str(i + 1) + " is " + str(t))
+    print("uncorrected p-value for b" + str(i + 1) + " is "
+      + str(p))
+    print("corrected p-value for b" + str(i + 1) + " is "
+      + str(p * m) + "\n")
 
 
 
