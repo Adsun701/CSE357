@@ -208,8 +208,10 @@ def gdm_log_update_yhat_data(b0, b1s, x_datas):
   return yhat_data
 
 # gradient descent algorithm for multiple linear regression,
-# x_datas is a 2D array
-def grad_descent_multi(x_datas, y_data):
+# x_datas is a 2D array, y_data is a 1D array,
+# and l2 is a boolean setting whether or not
+# to use l2 regularization.
+def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
   num_of_predictors = len(x_datas)
   prev_b0 = -1
   prev_b1s = [-1] * num_of_predictors
@@ -226,7 +228,9 @@ def grad_descent_multi(x_datas, y_data):
   while(done == False):
     yhat_data = gdm_update_yhat_data(b0, b1s, x_datas)
     prev_rss = current_rss
-    current_rss = rss(y_data, yhat_data)
+    if (l2==False): l2_term = 0
+    else: l2_term = penalty * (b0 * b0 + sum([b1 * b1 for b1 in b1s]))
+    current_rss = rss(y_data, yhat_data) + l2_term
     if (current_rss > prev_rss):
       timesOverflowed += 1
       overFlowStep = i0
@@ -378,7 +382,7 @@ def part1():
     x_data_mod = standardize(x_data)
     x_datas.append(x_data_mod)
   y_data_mod = standardize(y_data)
-  b1s, b0, rss = grad_descent_multi(x_datas, y_data_mod)
+  b1s, b0, rss = grad_descent_multi(x_datas, y_data_mod, l2=False)
   cc1 = b1s # standardized coefficients
   for i in range(len(cc1)):
     print("Correlation coefficient r" + str(i + 1) + " is", cc1[i])
@@ -392,7 +396,7 @@ def part1():
     xMean = mean(x_data)
     sx = sampleStd(x_data)
     x_datas.append(x_data)
-  b1s, b0, _ = grad_descent_multi(x_datas, y_data)
+  b1s, b0, _ = grad_descent_multi(x_datas, y_data, l2=False)
   cc2 = b1s # non-standardized coefficients
   for i in range(len(cc2)):
     print("Correlation coefficient b" + str(i + 1) + " is", cc2[i])
@@ -513,6 +517,26 @@ def part3():
   # the mean sequared error and the Pearson correlation
   # between your predictions and the ytest.
   print("\nPart 3 B:\n")
+  XtrainMod = np.transpose(Xtrain)
+  penalties=[0, 1, 10, 100]
+  for penalty in penalties:
+    b1s, b0, rss = grad_descent_multi(XtrainMod, ytrain, l2=True, penalty=penalty)
+    yhats = []
+    print("for penalty "  + str(penalty) + ":\n")
+    mse = 0
+    yhat = 0
+    for i in range(len(ytrain)):
+      yhat = b0
+      for j in range(len(XtrainMod)):
+        yhat += XtrainMod[j][i] * b1s[j]
+      yhats.append(yhat)
+      y = ytrain[i]
+      mse += (y - yhat) ** 2
+    mse /= len(ytrain)
+    print("Mean-squared error for penalty " + str(penalty) + " is %f" % mse)
+    r = covariance(yhats, ytrain) / (sampleStd(yhats) * sampleStd(ytrain))
+    print("Pearson correlation coefficient for penalty " + str(penalty) + " is " + str(r))
+
 
   # C. Setup your data for cross-validation with is_class1.
   # Make a random 80% train and the final 20% test as follows:
