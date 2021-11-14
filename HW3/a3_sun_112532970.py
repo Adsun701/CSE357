@@ -356,10 +356,6 @@ def part1():
   print("\nPart 1 C:\n")
   for i in range(1, 13):
     x_data = wines.data[:,i]
-    xMean = mean(x_data)
-    yMean = mean(y_data)
-    sx = sampleStd(x_data)
-    sy = sampleStd(y_data)
     x_data_mod = standardize(x_data)
     y_data_mod = standardize(y_data)
 
@@ -378,13 +374,7 @@ def part1():
   # as the value of the intercept (ꞵ0) for both versions.
   print("\nPart 1 D:\n")
   print("With standardization")
-  x_datas = []
-  for i in range(1, 13):
-    x_data = wines.data[:,i]
-    xMean = mean(x_data)
-    sx = sampleStd(x_data)
-    x_data_mod = standardize(x_data)
-    x_datas.append(x_data_mod)
+  x_datas = [standardize(wines.data[:,i]) for i in range(1, 13)]
   y_data_mod = standardize(y_data)
   b1s, b0, rss = grad_descent_multi(x_datas, y_data_mod, l2=False)
   cc1 = b1s # standardized coefficients
@@ -394,12 +384,7 @@ def part1():
   x_datas_standardized = x_datas
 
   print("\nWithout standardization")
-  x_datas = []
-  for i in range(1, 13):
-    x_data = wines.data[:,i]
-    xMean = mean(x_data)
-    sx = sampleStd(x_data)
-    x_datas.append(x_data)
+  x_datas = [wines.data[:,i] for i in range(1, 13)]
   b1s, b0, _ = grad_descent_multi(x_datas, y_data, l2=False)
   cc2 = b1s # non-standardized coefficients
   for i in range(len(cc2)):
