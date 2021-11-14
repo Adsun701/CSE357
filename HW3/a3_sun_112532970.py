@@ -525,23 +525,32 @@ def part3():
   # between your predictions and the ytest.
   print("\nPart 3 B:\n")
   XtrainMod = np.transpose(Xtrain)
-  penalties=[0, 1, 10, 100]
+  for i in range(len(XtrainMod)):
+    XtrainMod[i] = standardize(XtrainMod[i])
+  XtestMod = np.transpose(Xtest)
+  for i in range(len(XtestMod)):
+    XtestMod[i] = standardize(XtestMod[i])
+  ytrainMod = standardize(ytrain)
+  ytestMod = standardize(ytest)
+  penalties=[0, 0.01, 0.1, 1, 10, 100]
   for penalty in penalties:
-    b1s, b0, rss = grad_descent_multi(XtrainMod, ytrain, l2=True, penalty=penalty)
+    b1s, b0, rss = grad_descent_multi(XtrainMod, ytrainMod, l2=True, penalty=penalty)
     yhats = []
-    print("for penalty "  + str(penalty) + ":\n")
+    if (penalty == 0):
+      print("without L2 regularization penalty:")
+    else: print("for penalty "  + str(penalty) + ":\n")
     mse = 0
     yhat = 0
-    for i in range(len(ytrain)):
+    for i in range(len(ytestMod)):
       yhat = b0
-      for j in range(len(XtrainMod)):
-        yhat += XtrainMod[j][i] * b1s[j]
+      for j in range(len(XtestMod)):
+        yhat += XtestMod[j][i] * b1s[j]
       yhats.append(yhat)
-      y = ytrain[i]
+      y = ytestMod[i]
       mse += (y - yhat) ** 2
-    mse /= len(ytrain)
+    mse /= len(ytestMod)
     print("Mean-squared error for penalty " + str(penalty) + " is %f" % mse)
-    r = covariance(yhats, ytrain) / (sampleStd(yhats) * sampleStd(ytrain))
+    r = covariance(yhats, ytestMod) / (sampleStd(yhats) * sampleStd(ytestMod))
     print("Pearson correlation coefficient for penalty " + str(penalty) + " is " + str(r))
     print()
 
@@ -561,29 +570,48 @@ def part3():
   # -> log loss
   # -> precision (positive predictive value)
   # -> recall (sensitivity;  true positive rate)
-  # -> f1 value
+  # -> f1 value (2 * (precision * recall) / (precision + recall))
   # -> specificity (true negative rate)
   print("\nPart 3 D:\n")
   XtrainMod = np.transpose(Xtrain)
-  penalties=[0, 1, 10, 100]
+  for i in range(len(XtrainMod)):
+    XtrainMod[i] = standardize(XtrainMod[i])
+  XtestMod = np.transpose(Xtest)
+  for i in range(len(XtestMod)):
+    XtestMod[i] = standardize(XtestMod[i])
+  penalties=[0, 0.01, 0.1, 1, 10, 100]
   for penalty in penalties:
+    fp = 0 # false positives.
+    fn = 0 # false negatives.
+    tp = 0 # true positives.
+    tn = 0 # true negatives.
     b1s, b0, rss = grad_descent_log_multi(XtrainMod, ytrain, l2=True, penalty=penalty)
     yhats = []
-    print("for penalty "  + str(penalty) + ":")
+    if (penalty == 0):
+      print("without L2 regularization penalty:")
+    else: print("for penalty "  + str(penalty) + ":")
     print("Log loss is", rss)
-    mse = 0
     yhat = 0
-    for i in range(len(ytrain)):
+    for i in range(len(ytest)):
+      y = ytest[i]
       yhat = b0
-      for j in range(len(XtrainMod)):
-        yhat += XtrainMod[j][i] * b1s[j]
-      yhats.append(yhat)
-      y = ytrain[i]
-      mse += (y - yhat) ** 2
-    mse /= len(ytrain)
-    print("Mean-squared error for penalty " + str(penalty) + " is %f" % mse)
-    r = covariance(yhats, ytrain) / (sampleStd(yhats) * sampleStd(ytrain))
-    print("Pearson correlation coefficient for penalty " + str(penalty) + " is " + str(r))
+      for j in range(len(XtestMod)):
+        yhat += XtestMod[j][i] * b1s[j]
+      yhat = 1.0 / (1 + np.e ** -(yhat))
+      if (yhat >= 0.5):
+        if (y == 1): tp += 1
+        else: fp += 1
+      else:
+        if (y == 0): tn += 1
+        else: fn += 1
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    f1 = (2 * (precision * recall) / (precision + recall))
+    specificity = tn / (tn + fp)
+    print("precision:", precision)
+    print("recall:", recall)
+    print("f1:", f1)
+    print("specificity:", specificity)
     print()
 
   return
