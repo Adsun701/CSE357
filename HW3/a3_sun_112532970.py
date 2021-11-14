@@ -68,13 +68,22 @@ def rFromSlope(slope, x_data, y_data):
 
 # residual sum of squares
 def rss(arr, arrhat):
-  return np.sum([(arr[i] - arrhat[i]) ** 2 for i in range(len(arr))])
+  s = 0.0
+  for i in range(len(arr)):
+    s += (arr[i] - arrhat[i]) ** 2
+  return s
 
 def rs(arr, arrhat):
-  return np.sum([arrhat[i] - arr[i] for i in range(len(arr))])
+  s = 0.0
+  for i in range(len(arr)):
+    s += arrhat[i] - arr[i]
+  return s
 
 def x_times_rs(xarr, yarr, yarrhat):
-  return np.sum([xarr[i] * (yarrhat[i] - yarr[i]) for i in range(len(xarr))])
+  s = 0.0
+  for i in range(len(xarr)):
+    s += xarr[i] * (yarrhat[i] - yarr[i])
+  return s
 
 # gradient descent algorithm, returns the slope
 # and y-intercept respectively of the linear regression
@@ -92,8 +101,11 @@ def grad_descent(x_data, y_data):
   done = False
   i0 = 0
   overFlowStep = -1
+  num_of_points = len(y_data)
+  yhat_data = [0] * num_of_points
   while(done == False):
-    yhat_data = [b0 + b1 * x for x in x_data]
+    for i in range(num_of_points):
+      yhat_data[i] = b0 + b1 * x_data[i]
     prev_rss = current_rss
     current_rss = rss(y_data, yhat_data)
     if (current_rss > prev_rss):
@@ -142,6 +154,8 @@ def grad_descent_log(x_data, y_data):
   done = False
   i0 = 0
   overFlowStep = -1
+  num_of_points = len(y_data)
+  yhat_data = [0] * num_of_points
   while(done == False):
     yhat_data = [sigmoid(x, b0, b1) for x in x_data]
     prev_rss = current_rss
@@ -173,30 +187,13 @@ def grad_descent_log(x_data, y_data):
     i0 += 1
   return (b1, b0)
 
-def gdm_update_yhat_data(b0, b1s, x_datas):
-  yhat_data = [0] * len(x_datas[0])
-  for i in range(len(yhat_data)):
-    s = 0
-    for j in range(len(x_datas)):
-      s += b1s[j] * x_datas[j][i]
-    yhat_data[i] = s
-  return yhat_data
-
-def gdm_log_update_yhat_data(b0, b1s, x_datas):
-  yhat_data = [0] * len(x_datas[0])
-  for i in range(len(yhat_data)):
-    s = b0
-    for j in range(len(x_datas)):
-      s += b1s[j] * x_datas[j][i]
-    yhat_data[i] = 1 / (1 + np.e ** -(s))
-  return yhat_data
-
 # gradient descent algorithm for multiple linear regression,
 # x_datas is a 2D array, y_data is a 1D array,
 # and l2 is a boolean setting whether or not
 # to use l2 regularization.
-def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
+def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1, max_iter=50000):
   num_of_predictors = len(x_datas)
+  num_of_points = len(y_data)
   prev_b0 = -1
   prev_b1s = [-1] * num_of_predictors
   b0 = 0
@@ -209,14 +206,24 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
   done = False
   i0 = 0
   overFlowStep = -1
+  just_overflowed = False
+  yhat_data = [0] * num_of_points
   while(done == False):
-    yhat_data = gdm_update_yhat_data(b0, b1s, x_datas)
+    for i in range(num_of_points):
+      s = b0
+      for j in range(num_of_predictors):
+        s += b1s[j] * x_datas[j][i]
+      yhat_data[i] = s
     prev_rss = current_rss
     if (l2==False): l2_term = 0
     else: l2_term = penalty * (b0 * b0 + sum([b1 * b1 for b1 in b1s]))
-    current_rss = rss(y_data, yhat_data) + l2_term
+    current_rss = 0
+    for i in range(num_of_points):
+      current_rss += (y_data[i] - yhat_data[i]) ** 2
+    current_rss += l2_term
     if (current_rss > prev_rss):
-      i0 -= 1
+      just_overflowed = True
+      current_rss = prev_rss
       timesOverflowed += 1
       overFlowStep = i0
       alpha /= 10
@@ -226,7 +233,10 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
       b0 = prev_b0
       b1s = prev_b1s.copy()
       continue
-    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.00000001):
+    if (i0 > 5000 and just_overflowed == False and prev_rss != np.inf and abs(current_rss - prev_rss) < 0.000001):
+      done = True
+      break
+    elif (i0 >= max_iter):
       done = True
       break
     prev_b0 = b0
@@ -234,13 +244,13 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
     b0 = b0 - alpha * rs(y_data, yhat_data)
     for i in range(num_of_predictors):
       b1s[i] = b1s[i] - alpha * x_times_rs(x_datas[i], y_data, yhat_data)
-    if (overFlowStep > 0 and i0 - overFlowStep >= 5 and timesDivided > 0):
+    if (overFlowStep > 0 and i0 - overFlowStep >= 10 and timesDivided > 0):
       alpha *= 10
       timesDivided -= 1
       if (timesDivided == 0): overFlowStep = -1
-    elif (i0 % 20 == 0):
+    elif (i0 % 50 == 0):
       alpha *= 10
-
+    just_overflowed = False
     i0 += 1
   return (b1s, b0, current_rss)
 
@@ -248,13 +258,14 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
 # log regression, x_datas is a 2D array, y_data
 # is a 1D array, and l2 is a boolean setting
 # whether or not to use l2 regularization.
-def grad_descent_log_multi(x_datas, y_data, l2=False, penalty=0.1):
+def grad_descent_log_multi(x_datas, y_data, l2=False, penalty=0.1, max_iter=50000):
   num_of_predictors = len(x_datas)
+  num_of_points = len(y_data)
   prev_b0 = -1
   prev_b1s = [-1] * num_of_predictors
   b0 = 0
   b1s = [0] * num_of_predictors
-  alpha = 0.000001
+  alpha = 0.000000001
   timesDivided = 0
   timesOverflowed = 0
   prev_rss = np.inf
@@ -262,14 +273,23 @@ def grad_descent_log_multi(x_datas, y_data, l2=False, penalty=0.1):
   done = False
   i0 = 0
   overFlowStep = -1
+  just_overflowed = False
+  yhat_data = [0] * num_of_points
   while(done == False):
-    yhat_data = gdm_log_update_yhat_data(b0, b1s, x_datas)
+    for i in range(num_of_points):
+      s = b0
+      for j in range(num_of_predictors):
+        s += b1s[j] * x_datas[j][i]
+      yhat_data[i] = 1.0 / (1 + np.e ** -(s))
     prev_rss = current_rss
     if (l2==False): l2_term = 0
     else: l2_term = penalty * (b0 * b0 + sum([b1 * b1 for b1 in b1s]))
-    current_rss = rss(y_data, yhat_data) + l2_term
+    current_rss = 0
+    for i in range(num_of_points):
+      current_rss += (y_data[i] - yhat_data[i]) ** 2
+    current_rss += l2_term
     if (current_rss > prev_rss):
-      i0 -= 1
+      just_overflowed = True
       timesOverflowed += 1
       overFlowStep = i0
       alpha /= 10
@@ -279,7 +299,10 @@ def grad_descent_log_multi(x_datas, y_data, l2=False, penalty=0.1):
       b0 = prev_b0
       b1s = prev_b1s.copy()
       continue
-    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.000001):
+    if (i0 > 500 and just_overflowed == False and prev_rss != np.inf and abs(current_rss - prev_rss) < 0.00000000000001):
+      done = True
+      break
+    elif (i0 >= max_iter):
       done = True
       break
     prev_b0 = b0
@@ -287,13 +310,13 @@ def grad_descent_log_multi(x_datas, y_data, l2=False, penalty=0.1):
     b0 = b0 - alpha * rs(y_data, yhat_data)
     for i in range(num_of_predictors):
       b1s[i] = b1s[i] - alpha * x_times_rs(x_datas[i], y_data, yhat_data)
-    if (overFlowStep > 0 and i0 - overFlowStep >= 5 and timesDivided > 0):
+    if (overFlowStep > 0 and i0 - overFlowStep >= 10 and timesDivided > 0):
       alpha *= 10
       timesDivided -= 1
       if (timesDivided == 0): overFlowStep = -1
-    elif (i0 % 20 == 0):
+    elif (i0 % 50 == 0):
       alpha *= 10
-
+    just_overflowed = False
     i0 += 1
   return (b1s, b0, current_rss)
 
@@ -360,25 +383,31 @@ def part1():
   # as the value of the intercept (ꞵ0) for both versions.
   print("\nPart 1 D:\n")
   print("With standardization")
-  x_datas = [standardize(wines.data[:,i]) for i in range(1, 13)]
+  x_datas_mod = [standardize(wines.data[:,i]) for i in range(1, 13)]
   y_data_mod = standardize(y_data)
-  b1s, b0, rss = grad_descent_multi(x_datas, y_data_mod, l2=False)
+  b1s, b0, rss = grad_descent_multi(x_datas_mod, y_data_mod, l2=False)
   cc1 = b1s # standardized coefficients
   for i in range(len(cc1)):
     print("Correlation coefficient r" + str(i + 1) + " is", cc1[i])
   print("Y-intercept is", b0)
-  x_datas_standardized = x_datas
+  x_datas_standardized = x_datas_mod
 
   print("\nWithout standardization")
-  b1s = [0] * len(x_datas)
-  s = 0
-  for i in range(len(b1s)):
-    b1s[i] = slope(x_datas[i], y_data, cc1[i])
-    s += b1s[i] * mean(x_datas[i])
-  b0 = mean(y_data) - s
-  for i in range(len(b1s)):
-    print("b" + str(i + 1) + " is", b1s[i])
+  x_datas = [wines.data[:,i] for i in range(1, 13)]
+  b1s, b0, rss = grad_descent_multi(x_datas, y_data, l2=False)
+  cc2 = b1s # standardized coefficients
+  for i in range(len(cc2)):
+    print("Correlation coefficient r" + str(i + 1) + " is", cc2[i])
   print("Y-intercept is", b0)
+  #b1s = [0] * len(x_datas)
+  #s = 0
+  #for i in range(len(b1s)):
+  #  b1s[i] = slope(x_datas[i], y_data, cc1[i])
+  #  s += b1s[i] * mean(x_datas[i])
+  #b0 = mean(y_data) - s
+  #for i in range(len(b1s)):
+  #  print("b" + str(i + 1) + " is", b1s[i])
+  #print("Y-intercept is", b0)
 
   # E. Test coefficients from 1.D. for significance.
   # Use the t-test of regression coefficients to find
@@ -458,14 +487,19 @@ def part2():
 
   print("\nWithout standardization")
   x_datas = [wines.data[:,i] for i in range(0, 13)]
-  b1s = [0] * len(x_datas)
-  s = 0
-  for i in range(len(b1s)):
-    b1s[i] = cc1[i] / ((np.sqrt(3) / np.pi) * sampleStd(x_datas[i]))
-  b0 = b0 / ((np.sqrt(3) / np.pi) * sampleStd(y_data))
-  for i in range(len(b1s)):
-    print("b" + str(i + 1) + " is", b1s[i])
+  b1s, b0, _ = grad_descent_log_multi(x_datas, y_data)
+  cc2 = b1s
+  for i in range(len(cc2)):
+    print("b" + str(i + 1) + " is", cc2[i])
   print("Y-intercept is", b0)
+  #b1s = [0] * len(x_datas)
+  #s = 0
+  #for i in range(len(b1s)):
+  #  b1s[i] = cc1[i] / ((np.sqrt(3) / np.pi) * sampleStd(x_datas[i]))
+  #b0 = b0 / ((np.sqrt(3) / np.pi) * sampleStd(y_data))
+  #for i in range(len(b1s)):
+  #  print("b" + str(i + 1) + " is", b1s[i])
+  #print("Y-intercept is", b0)
 
   return
 
