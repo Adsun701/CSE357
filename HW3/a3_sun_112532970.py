@@ -68,29 +68,13 @@ def rFromSlope(slope, x_data, y_data):
 
 # residual sum of squares
 def rss(arr, arrhat):
-  try:
-    sum = 0.0
-    for i in range(len(arr)):
-      sum = sum + (arr[i] - arrhat[i]) ** 2
-    return sum
-  except FloatingPointError:
-    print(arr)
-    print(arrhat)
-    print(sum)
-    print(arr[i])
-    print(arrhat[i])
+  return np.sum([(arr[i] - arrhat[i]) ** 2 for i in range(len(arr))])
 
 def rs(arr, arrhat):
-  sum = 0.0
-  for i in range(len(arr)):
-    sum = sum + (arrhat[i] - arr[i])
-  return sum
+  return np.sum([arrhat[i] - arr[i] for i in range(len(arr))])
 
 def x_times_rs(xarr, yarr, yarrhat):
-  sum = 0.0
-  for i in range(len(xarr)):
-    sum = sum + (xarr[i] * (yarrhat[i] - yarr[i]))
-  return sum
+  return np.sum([xarr[i] * (yarrhat[i] - yarr[i]) for i in range(len(xarr))])
 
 # gradient descent algorithm, returns the slope
 # and y-intercept respectively of the linear regression
@@ -232,6 +216,7 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
     else: l2_term = penalty * (b0 * b0 + sum([b1 * b1 for b1 in b1s]))
     current_rss = rss(y_data, yhat_data) + l2_term
     if (current_rss > prev_rss):
+      i0 -= 1
       timesOverflowed += 1
       overFlowStep = i0
       alpha /= 10
@@ -241,7 +226,7 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1):
       b0 = prev_b0
       b1s = prev_b1s.copy()
       continue
-    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.000001):
+    if (prev_rss != np.inf and abs(current_rss - prev_rss) < 0.00000001):
       done = True
       break
     prev_b0 = b0
@@ -284,6 +269,7 @@ def grad_descent_log_multi(x_datas, y_data, l2=False, penalty=0.1):
     else: l2_term = penalty * (b0 * b0 + sum([b1 * b1 for b1 in b1s]))
     current_rss = rss(y_data, yhat_data) + l2_term
     if (current_rss > prev_rss):
+      i0 -= 1
       timesOverflowed += 1
       overFlowStep = i0
       alpha /= 10
@@ -384,11 +370,14 @@ def part1():
   x_datas_standardized = x_datas
 
   print("\nWithout standardization")
-  x_datas = [wines.data[:,i] for i in range(1, 13)]
-  b1s, b0, _ = grad_descent_multi(x_datas, y_data, l2=False)
-  cc2 = b1s # non-standardized coefficients
-  for i in range(len(cc2)):
-    print("Correlation coefficient b" + str(i + 1) + " is", cc2[i])
+  b1s = [0] * len(x_datas)
+  s = 0
+  for i in range(len(b1s)):
+    b1s[i] = slope(x_datas[i], y_data, cc1[i])
+    s += b1s[i] * mean(x_datas[i])
+  b0 = mean(y_data) - s
+  for i in range(len(b1s)):
+    print("b" + str(i + 1) + " is", b1s[i])
   print("Y-intercept is", b0)
 
   # E. Test coefficients from 1.D. for significance.
@@ -573,8 +562,8 @@ def part3():
 # main
 def main():
   part1()
-  part2()
-  part3()
+  #part2()
+  #part3()
 
 
 if __name__=="__main__":
