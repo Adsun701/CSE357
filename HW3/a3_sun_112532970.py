@@ -448,28 +448,23 @@ def part2():
   # the value of the intercept (ꞵ0) for both versions.
   print("\nPart 2 C:\n")
   print("With standardization")
-  x_datas = []
-  for i in range(0, 13):
-    x_data = wines.data[:,i]
-    x_data_mod = standardize(x_data)
-    x_datas.append(x_data_mod)
+  x_datas = [standardize(wines.data[:,i]) for i in range(0, 13)]
 
-  b1s, b0 = grad_descent_log_multi(x_datas, y_data)
+  b1s, b0, _ = grad_descent_log_multi(x_datas, y_data)
   correlation_coeffs = b1s
   for i in range(len(correlation_coeffs)):
     print("Correlation coefficient r" + str(i + 1) + " is", correlation_coeffs[i])
   print("Y-intercept is", b0)
 
   print("\nWithout standardization")
-  x_datas = []
-  for i in range(0, 13):
-    x_data = wines.data[:,i]
-    x_datas.append(x_data)
-
-  b1s, b0 = grad_descent_log_multi(x_datas, y_data)
-  correlation_coeffs = b1s
-  for i in range(len(correlation_coeffs)):
-    print("Correlation coefficient r" + str(i + 1) + " is", correlation_coeffs[i])
+  b1s = [0] * len(x_datas)
+  s = 0
+  for i in range(len(b1s)):
+    b1s[i] = slope(x_datas[i], y_data, correlation_coeffs[i])
+    s += b1s[i] * mean(x_datas[i])
+  b0 = mean(y_data) - s
+  for i in range(len(b1s)):
+    print("b" + str(i + 1) + " is", b1s[i])
   print("Y-intercept is", b0)
 
   return
@@ -562,8 +557,8 @@ def part3():
 # main
 def main():
   part1()
-  #part2()
-  #part3()
+  part2()
+  part3()
 
 
 if __name__=="__main__":
