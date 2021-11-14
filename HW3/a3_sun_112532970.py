@@ -580,6 +580,12 @@ def part3():
   for i in range(len(XtestMod)):
     XtestMod[i] = standardize(XtestMod[i])
   penalties=[0, 0.01, 0.1, 1, 10, 100]
+  nonzeroPenalties = []
+  losses = []
+  precisions = []
+  recalls = []
+  f1s = []
+  specificities = []
   for penalty in penalties:
     fp = 0 # false positives.
     fn = 0 # false negatives.
@@ -608,12 +614,31 @@ def part3():
     recall = tp / (tp + fn)
     f1 = (2 * (precision * recall) / (precision + recall))
     specificity = tn / (tn + fp)
+    if (penalty != 0):
+      nonzeroPenalties.append(penalty)
+      precisions.append(precision)
+      recalls.append(recall)
+      f1s.append(f1)
+      specificities.append(specificity)
+      losses.append(rss)
     print("precision:", precision)
     print("recall:", recall)
     print("f1:", f1)
     print("specificity:", specificity)
     print()
+  minIndex = 0
+  minLoss = np.inf
+  for i in range(len(losses)):
+    if (losses[i] < minLoss):
+      minIndex = i
+      minLoss = losses[i]
 
+  print("best penalty is " + str(nonzeroPenalties[minIndex]))
+  print("precision:", precisions[minIndex])
+  print("recall:", recalls[minIndex])
+  print("f1:", f1s[minIndex])
+  print("specificity:", specificities[minIndex])
+  print()
   return
 
 # main
