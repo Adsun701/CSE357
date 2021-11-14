@@ -1,0 +1,260 @@
+
+PART 1 A:
+
+
+Part 1 B:
+
+Correlation coefficient r1 is 0.09439694091041398
+Correlation coefficient r2 is 0.21154459643174453
+Correlation coefficient r3 is -0.31023513689108523
+Correlation coefficient r4 is 0.27079822591147995
+Correlation coefficient r5 is 0.28910112258745674
+Correlation coefficient r6 is 0.23681492790034603
+Correlation coefficient r7 is -0.15592946668732893
+Correlation coefficient r8 is 0.1366979117694798
+Correlation coefficient r9 is 0.5463641950837035
+Correlation coefficient r10 is -0.07174719733015461
+Correlation coefficient r11 is 0.07234318740052215
+Correlation coefficient r12 is 0.6437200371782138
+
+Part 1 C:
+
+Correlation coefficient r1 is 0.09447001626963034
+Correlation coefficient r2 is 0.2114698333576402
+Correlation coefficient r3 is -0.31031956108507847
+Correlation coefficient r4 is 0.27087191815081346
+Correlation coefficient r5 is 0.2891797955885271
+Correlation coefficient r6 is 0.2367312339072004
+Correlation coefficient r7 is -0.15600103531377485
+Correlation coefficient r8 is 0.1366164290258553
+Correlation coefficient r9 is 0.5464523485959681
+Correlation coefficient r10 is -0.07167506544973068
+Correlation coefficient r11 is 0.07227045633454028
+Correlation coefficient r12 is 0.6436400638551414
+
+Part 1 D:
+
+With standardization
+Correlation coefficient r1 is 0.1811432407474255
+Correlation coefficient r2 is 0.046585482241052946
+Correlation coefficient r3 is -0.1554451257063471
+Correlation coefficient r4 is 7.351778757149871e-05
+Correlation coefficient r5 is 0.04015215228483619
+Correlation coefficient r6 is 0.011227317165077159
+Correlation coefficient r7 is -0.03185518238485736
+Correlation coefficient r8 is -0.10751447699472086
+Correlation coefficient r9 is 0.4655692109519123
+Correlation coefficient r10 is 0.06106298349031655
+Correlation coefficient r11 is 0.14062593288194877
+Correlation coefficient r12 is 0.394051792558225
+Y-intercept is 7.625138753543523e-15
+
+Without standardization
+Correlation coefficient r1 is 0.27043714562661786
+Correlation coefficient r2 is 0.19172370973076824
+Correlation coefficient r3 is 0.16846850328271612
+Correlation coefficient r4 is 0.03841977525508051
+Correlation coefficient r5 is 0.2559896342272888
+Correlation coefficient r6 is 0.054106109292116435
+Correlation coefficient r7 is 0.11700665412544228
+Correlation coefficient r8 is -0.004711156419202506
+Correlation coefficient r9 is 0.2127309635218259
+Correlation coefficient r10 is 0.2851280927489394
+Correlation coefficient r11 is 0.5151416530965677
+Correlation coefficient r12 is 0.0013518207139527902
+Y-intercept is 0.27520427930106656
+
+Part 1 E:
+
+t for b1 is 2.1594032790191453
+uncorrected p-value for b1 is 0.01613150100360472
+corrected p-value for b1 is 0.19357801204325664
+
+t for b2 is 0.5553441723298066
+uncorrected p-value for b2 is 0.28970570662859685
+corrected p-value for b2 is 3.476468479543162
+
+t for b3 is -1.8530568006446577
+uncorrected p-value for b3 is 0.032830076923678855
+corrected p-value for b3 is 0.39396092308414626
+
+t for b4 is 0.0008764033970744976
+uncorrected p-value for b4 is 0.49965089501986537
+corrected p-value for b4 is 5.995810740238385
+
+t for b5 is 0.47865263393651447
+uncorrected p-value for b5 is 0.31640971268054463
+corrected p-value for b5 is 3.7969165521665356
+
+t for b6 is 0.13384051980531947
+uncorrected p-value for b6 is 0.4468458954549235
+corrected p-value for b6 is 5.362150745459082
+
+t for b7 is -0.37974469823871454
+uncorrected p-value for b7 is 0.3523116292575937
+corrected p-value for b7 is 4.227739551091124
+
+t for b8 is -1.2816769381317827
+uncorrected p-value for b8 is 0.10087705451207243
+corrected p-value for b8 is 1.2105246541448693
+
+t for b9 is 5.550036957446916
+uncorrected p-value for b9 is 5.591143137362309e-08
+corrected p-value for b9 is 6.709371764834771e-07
+
+t for b10 is 0.727930041615729
+uncorrected p-value for b10 is 0.23384407058632162
+corrected p-value for b10 is 2.8061288470358594
+
+t for b11 is 1.6763976360775272
+uncorrected p-value for b11 is 0.04777701187927297
+corrected p-value for b11 is 0.5733241425512756
+
+t for b12 is 4.697479902880104
+uncorrected p-value for b12 is 2.7591404393456642e-06
+corrected p-value for b12 is 3.310968527214797e-05
+
+
+Part 2 A:
+
+
+Part 2 B:
+
+coefficient 1 is -2.8981700375737787
+coefficient 2 is -0.7264803553914191
+coefficient 3 is -0.885109626560152
+coefficient 4 is 0.37544458289293775
+coefficient 5 is -0.7517237997556138
+coefficient 6 is -0.09606751988138042
+coefficient 7 is 0.0849558651012219
+coefficient 8 is 0.02426086141715337
+coefficient 9 is 0.11482239621047362
+coefficient 10 is -5.061504127077002
+coefficient 11 is 0.7312015386723899
+coefficient 12 is 0.3818621982448787
+coefficient 13 is -2.3464527063771605
+
+Part 2 C:
+
+With standardization
+Correlation coefficient r1 is -14.645804677066748
+Correlation coefficient r2 is -9.059981898187402
+Correlation coefficient r3 is -21.921320847613508
+Correlation coefficient r4 is 13.41213940686719
+Correlation coefficient r5 is 5.8100723783149535
+Correlation coefficient r6 is 1.6751932271818653
+Correlation coefficient r7 is 10.608441976032129
+Correlation coefficient r8 is 11.45936509026619
+Correlation coefficient r9 is 3.874762843708146
+Correlation coefficient r10 is -40.69895116968685
+Correlation coefficient r11 is 13.284758096433038
+Correlation coefficient r12 is -0.9882384270386172
+Correlation coefficient r13 is -38.455677738303905
+Y-intercept is -25.22761327559601
+
+Without standardization
+b1 is -1.5764110860585461e-06
+b2 is -2.092810878910463e-06
+b3 is -2.512722168587509e-07
+b4 is 6.941884248692457e-06
+b5 is -8.928706281886373e-06
+b6 is 3.9713262440211603e-07
+b7 is 9.801784106608602e-07
+b8 is 5.1011473264204374e-08
+b9 is 6.387308934711715e-07
+b10 is -1.022905053970269e-05
+b11 is 7.881704841021962e-07
+b12 is 1.634253766557055e-06
+b13 is -0.0010028347006521632
+Y-intercept is 1.7998174228483685e-07
+
+Part 3 A:
+
+Xs:  (142, 12) (36, 12) ;  ys:  (142,) (36,)
+
+Part 3 B:
+
+without L2 regularization penalty:
+Mean-squared error for penalty 0 is 0.298581
+Pearson correlation coefficient for penalty 0 is 0.8325640552314094
+
+for penalty 0.01:
+
+Mean-squared error for penalty 0.01 is 0.298576
+Pearson correlation coefficient for penalty 0.01 is 0.832566829985159
+
+for penalty 0.1:
+
+Mean-squared error for penalty 0.1 is 0.298482
+Pearson correlation coefficient for penalty 0.1 is 0.8326206386697771
+
+for penalty 1:
+
+Mean-squared error for penalty 1 is 0.298116
+Pearson correlation coefficient for penalty 1 is 0.8328189893321997
+
+for penalty 10:
+
+Mean-squared error for penalty 10 is 0.300398
+Pearson correlation coefficient for penalty 10 is 0.8313187068983718
+
+for penalty 100:
+
+Mean-squared error for penalty 100 is 0.359150
+Pearson correlation coefficient for penalty 100 is 0.8325849488088384
+
+
+Part 3 C:
+
+Xs:  (142, 13) (36, 13) ;  ys:  (142,) (36,)
+
+Part 3 D:
+
+without L2 regularization penalty:
+Log loss is 0.11194198941234446
+precision: 1.0
+recall: 1.0
+f1: 1.0
+specificity: 1.0
+
+for penalty 0.01:
+Log loss is 0.9781842227091427
+precision: 1.0
+recall: 1.0
+f1: 1.0
+specificity: 1.0
+
+for penalty 0.1:
+Log loss is 3.1048497719484383
+precision: 1.0
+recall: 1.0
+f1: 1.0
+specificity: 1.0
+
+for penalty 1:
+Log loss is 8.084512250109356
+precision: 0.9333333333333333
+recall: 1.0
+f1: 0.9655172413793104
+specificity: 0.9545454545454546
+
+for penalty 10:
+Log loss is 18.697479302764492
+precision: 0.9333333333333333
+recall: 1.0
+f1: 0.9655172413793104
+specificity: 0.9545454545454546
+
+for penalty 100:
+Log loss is 31.036226481488047
+precision: 0.9333333333333333
+recall: 1.0
+f1: 0.9655172413793104
+specificity: 0.9545454545454546
+
+best penalty is 0.01
+precision: 1.0
+recall: 1.0
+f1: 1.0
+specificity: 1.0
+
