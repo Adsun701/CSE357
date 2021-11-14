@@ -451,18 +451,18 @@ def part2():
   x_datas = [standardize(wines.data[:,i]) for i in range(0, 13)]
 
   b1s, b0, _ = grad_descent_log_multi(x_datas, y_data)
-  correlation_coeffs = b1s
-  for i in range(len(correlation_coeffs)):
-    print("Correlation coefficient r" + str(i + 1) + " is", correlation_coeffs[i])
+  cc1 = b1s
+  for i in range(len(cc1)):
+    print("Correlation coefficient r" + str(i + 1) + " is", cc1[i])
   print("Y-intercept is", b0)
 
   print("\nWithout standardization")
+  x_datas = [wines.data[:,i] for i in range(0, 13)]
   b1s = [0] * len(x_datas)
   s = 0
   for i in range(len(b1s)):
-    b1s[i] = slope(x_datas[i], y_data, correlation_coeffs[i])
-    s += b1s[i] * mean(x_datas[i])
-  b0 = mean(y_data) - s
+    b1s[i] = cc1[i] / ((np.sqrt(3) / np.pi) * sampleStd(x_datas[i]))
+  b0 = b0 / ((np.sqrt(3) / np.pi) * sampleStd(y_data))
   for i in range(len(b1s)):
     print("b" + str(i + 1) + " is", b1s[i])
   print("Y-intercept is", b0)
