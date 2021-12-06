@@ -3,6 +3,7 @@ import scipy.stats as ss
 import matplotlib.pyplot as plt
 import csv
 import time
+#import sys
 
 from sklearn.linear_model import LinearRegression
 
@@ -112,9 +113,10 @@ x_datas_mod = [standardize(x_data) for x_data in x_datas]
 cases_data_mod = standardize(cases_data)
 deaths_data_mod = standardize(deaths_data)
 
+#sys.stdout = open('a4_sun_112532970_OUTPUT.txt', 'w')
+
 
 #####################################
-
 ## Method 1: Hypothesis Testing
 def hypothesisTest(x_datas, y_data, rss, coefs, alpha):
   n = len(y_data)
@@ -141,14 +143,12 @@ def hypothesisTest(x_datas, y_data, rss, coefs, alpha):
   
 
 #####################################
-
 ## Method 2: Bonferroni correction
 def bonferroniCorrect(p, n):
   return p * n
 
 
 #####################################
-
 ## Method 3: Multiple Linear Regression
 # gradient descent algorithm for multiple linear regression,
 # x_datas is a 2D array, y_data is a 1D array,
@@ -219,7 +219,6 @@ def grad_descent_multi(x_datas, y_data, l2=False, penalty=0.1, max_iter=1000):
 
 
 #####################################
-
 ## Method 4: Correlation
 
 # returns the correlation between two arrays
@@ -228,7 +227,6 @@ def correlation(arr1, arr2):
   return covariance(arr1, arr2) / (sampleStd(arr1) * sampleStd(arr2))
 
 #####################################
-
 ## Method 5: Bootstrap Confidence Interval
 def bootstrap_ci(x_data, y_data, iters=1000):
   all_coefs = []
@@ -287,13 +285,47 @@ def main():
   print("Method 4: Correlation")
   print("Finding correlation coefficients using covariance / (sx * sy) formula for cases of COVID-19")
   for i in range(len(x_datas)):
+    r = correlation(x_datas[i], cases_data)
+    b1 = slope(x_datas[i], cases_data, r)
+    b0 = yIntercept(x_datas[i], cases_data, r)
+    x = np.linspace(0, 1, 1000)
+    x0 = np.linspace(0, 1000, 1000)
     print("correlation coefficient " + str(i + 1) +
-      " (" + str(header_row[i + 5]) + ") is", correlation(x_datas[i], cases_data))
+      " (" + str(header_row[i + 5]) + ") is", r)
+    if i < 5:
+      plt.plot(x, (x * b1 + b0), label=header_row[i + 5])
+      if (i == 4):
+        leg = plt.legend(loc='upper right')
+        plt.title("linear regression lines relating mask usage with number of cases of COVID-19")
+        plt.show()
+    elif i >= 5 and i < 13:
+      plt.plot(x0, (x0 * b1 + b0), label=header_row[i + 5])
+      if (i == 12):
+        leg = plt.legend(loc='upper right')
+        plt.title("linear regression lines relating other factors with number of cases of COVID-19")
+        plt.show()
   print("\n")
   print("Finding correlation coefficients using covariance / (sx * sy) formula for deaths from COVID-19")
   for i in range(len(x_datas)):
+    r = correlation(x_datas[i], deaths_data)
+    b1 = slope(x_datas[i], deaths_data, r)
+    b0 = yIntercept(x_datas[i], deaths_data, r)
+    x = np.linspace(0, 1, 1000)
+    x0 = np.linspace(0, 1000, 1000)
     print("correlation coefficient " + str(i + 1) +
-      " (" + str(header_row[i + 5]) + ") is", correlation(x_datas[i], deaths_data))
+      " (" + str(header_row[i + 5]) + ") is", r)
+    if i < 5:
+      plt.plot(x, (x * b1 + b0), label=header_row[i + 5])
+      if (i == 4):
+        leg = plt.legend(loc='upper right')
+        plt.title("linear regression lines relating mask usage with number of deaths from COVID-19")
+        plt.show()
+    elif i >= 5 and i < 13:
+      plt.plot(x0, (x0 * b1 + b0), label=header_row[i + 5])
+      if (i == 12):
+        leg = plt.legend(loc='upper right')
+        plt.title("linear regression lines relating other factors with number of deaths from COVID-19")
+        plt.show()
   print("\n")
 
 

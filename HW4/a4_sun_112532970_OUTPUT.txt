@@ -1,0 +1,324 @@
+Method 3: Multiple Linear Regression with Gradient Descent
+Linear regression with number of cases of COVID-19 as dependent variable
+b1 (NEVER) is 1676.0314812209524
+b2 (RARELY) is 1766.904366657153
+b3 (SOMETIMES) is 4400.18329529285
+b4 (FREQUENTLY) is 3538.7929377125092
+b5 (ALWAYS) is -1220.6997799562942
+b6 (POPESTIMATE2020) is 0.02236542784903554
+b7 (NPOPCHG_2020) is -0.0766530046404815
+b8 (BIRTHS2020) is 1.3078349846269135
+b9 (DEATHS2020) is 2.3856972909743988
+b10 (NATURALINC2020) is 0.8614048149452288
+b11 (INTERNATIONALMIG2020) is 1.220998743352386
+b12 (DOMESTICMIG2020) is -0.4165711584055453
+b13 (NETMIG2020) is -0.3130722468033776
+b14 (RESIDUAL2020) is -114.99565102986146
+b15 (GQESTIMATES2020) is -0.09630534682564482
+b16 (RBIRTH2020) is 5.878444073176526
+b17 (RDEATH2020) is -88.4448382197904
+b18 (RNATURALINC2020) is 44.02124213044572
+b19 (RINTERNATIONALMIG2020) is -115.58992147267253
+b20 (RDOMESTICMIG2020) is 7.456848018094857
+b21 (RNETMIG2020) is 6.459751389708347
+Y-intercept is 132.06878959010737
+
+
+Linear regression with number of deaths from COVID-19 as dependent variable
+b1 (NEVER) is 57.91320456998038
+b2 (RARELY) is 2.3604178648052407
+b3 (SOMETIMES) is 6.783468054625995
+b4 (FREQUENTLY) is -50.09423085605816
+b5 (ALWAYS) is -0.45002018269433364
+b6 (POPESTIMATE2020) is 0.001069260068611139
+b7 (NPOPCHG_2020) is -0.016452654515257695
+b8 (BIRTHS2020) is 0.006569266501573813
+b9 (DEATHS2020) is 0.0255614273082492
+b10 (NATURALINC2020) is -0.038182639219194375
+b11 (INTERNATIONALMIG2020) is -0.010093558569291172
+b12 (DOMESTICMIG2020) is -0.006803992343974111
+b13 (NETMIG2020) is -0.009552991934234837
+b14 (RESIDUAL2020) is -2.095798398781333
+b15 (GQESTIMATES2020) is -0.0026230483761839744
+b16 (RBIRTH2020) is 2.762829027776717
+b17 (RDEATH2020) is 0.37820941891269594
+b18 (RNATURALINC2020) is 0.748485090983511
+b19 (RINTERNATIONALMIG2020) is 2.543728925270631
+b20 (RDOMESTICMIG2020) is 0.11380046012353336
+b21 (RNETMIG2020) is 0.13868612421296367
+Y-intercept is -40.81267994872303
+
+
+Method 1: Hypothesis Testing using the T-distribution
+Cases:
+t for b1 is 0.9468732325180509
+uncorrected p-value for b1 is 0.17189255755673938
+corrected p-value for b1 is 3.6097437086915267
+
+t for b2 is 0.9345256667486536
+uncorrected p-value for b2 is 0.17505670772585769
+corrected p-value for b2 is 3.6761908622430113
+
+t for b3 is 2.416911760373461
+uncorrected p-value for b3 is 0.007858182217539644
+corrected p-value for b3 is 0.16502182656833253
+
+t for b4 is 2.0595324983282204
+uncorrected p-value for b4 is 0.019767771535742384
+corrected p-value for b4 is 0.4151232022505901
+
+t for b5 is -1.759652549796057
+uncorrected p-value for b5 is 0.03928798257940776
+corrected p-value for b5 is 0.8250476341675629
+
+t for b6 is 51.5217295859923
+uncorrected p-value for b6 is 0.0
+corrected p-value for b6 is 0.0
+
+t for b7 is -1.817090796237963
+uncorrected p-value for b7 is 0.03465505166777348
+corrected p-value for b7 is 0.7277560850232431
+
+t for b8 is 36.6574947923889
+uncorrected p-value for b8 is 0.0
+corrected p-value for b8 is 0.0
+
+t for b9 is 46.88049840144036
+uncorrected p-value for b9 is 0.0
+corrected p-value for b9 is 0.0
+
+t for b10 is 9.566651479792965
+uncorrected p-value for b10 is 0.0
+corrected p-value for b10 is 0.0
+
+t for b11 is 10.19484625336826
+uncorrected p-value for b11 is 0.0
+corrected p-value for b11 is 0.0
+
+t for b12 is -9.847583135511364
+uncorrected p-value for b12 is 8.11552140352393e-23
+corrected p-value for b12 is 1.7042594947400255e-21
+
+t for b13 is -6.799371983396
+uncorrected p-value for b13 is 6.3974202250433185e-12
+corrected p-value for b13 is 1.343458247259097e-10
+
+t for b14 is -13.777335444108454
+uncorrected p-value for b14 is 3.9206753215448693e-42
+corrected p-value for b14 is 8.233418175244226e-41
+
+t for b15 is -4.603341299427238
+uncorrected p-value for b15 is 2.1715010084490437e-06
+corrected p-value for b15 is 4.5601521177429914e-05
+
+t for b16 is 0.1321415790363609
+uncorrected p-value for b16 is 0.4474409033696587
+corrected p-value for b16 is 9.396258970762833
+
+t for b17 is -2.3649018358728324
+uncorrected p-value for b17 is 0.009051352165790828
+corrected p-value for b17 is 0.19007839548160738
+
+t for b18 is 1.707167298819263
+uncorrected p-value for b18 is 0.04395093397929073
+corrected p-value for b18 is 0.9229696135651053
+
+t for b19 is -1.266097270672186
+uncorrected p-value for b19 is 0.10279181154509938
+corrected p-value for b19 is 2.158628042447087
+
+t for b20 is 0.8510012389205949
+uncorrected p-value for b20 is 0.1974207298858197
+corrected p-value for b20 is 4.145835327602214
+
+t for b21 is 0.7333361885519382
+uncorrected p-value for b21 is 0.23170741108056725
+corrected p-value for b21 is 4.865855632691912
+
+
+
+Deaths:
+t for b1 is 1.736097223987153
+uncorrected p-value for b1 is 0.04132834172551292
+corrected p-value for b1 is 0.8678951762357713
+
+t for b2 is 0.06624511536736721
+uncorrected p-value for b2 is 0.4735937049229827
+corrected p-value for b2 is 9.945467803382636
+
+t for b3 is 0.19770997864081508
+uncorrected p-value for b3 is 0.42164316928365764
+corrected p-value for b3 is 8.85450655495681
+
+t for b4 is -1.5469917168925784
+uncorrected p-value for b4 is 0.06098914679114236
+corrected p-value for b4 is 1.2807720826139897
+
+t for b5 is -0.034422057568558546
+uncorrected p-value for b5 is 0.48627152446583755
+corrected p-value for b5 is 10.211702013782588
+
+t for b6 is 130.70233604740145
+uncorrected p-value for b6 is 0.0
+corrected p-value for b6 is 0.0
+
+t for b7 is -20.695227358131252
+uncorrected p-value for b7 is 5.9736376622756556e-89
+corrected p-value for b7 is 1.2544639090778877e-87
+
+t for b8 is 9.770425773551848
+uncorrected p-value for b8 is 0.0
+corrected p-value for b8 is 0.0
+
+t for b9 is 26.6531633699026
+uncorrected p-value for b9 is 0.0
+corrected p-value for b9 is 0.0
+
+t for b10 is -22.50118444401892
+uncorrected p-value for b10 is 1.691355232270977e-103
+corrected p-value for b10 is 3.5518459877690518e-102
+
+t for b11 is -4.471945984643647
+uncorrected p-value for b11 is 4.029876658796101e-06
+corrected p-value for b11 is 8.462740983471811e-05
+
+t for b12 is -8.534754873992338
+uncorrected p-value for b12 is 1.1333421595436937e-17
+corrected p-value for b12 is 2.380018535041757e-16
+
+t for b13 is -11.00906461076003
+uncorrected p-value for b13 is 6.317519311297646e-28
+corrected p-value for b13 is 1.3266790553725057e-26
+
+t for b14 is -13.32355437190302
+uncorrected p-value for b14 is 1.296786066738355e-39
+corrected p-value for b14 is 2.7232507401505455e-38
+
+t for b15 is -6.652974427681016
+uncorrected p-value for b15 is 1.7209740060081617e-11
+corrected p-value for b15 is 3.6140454126171397e-10
+
+t for b16 is 3.2954740016863235
+uncorrected p-value for b16 is 0.0004974055091979679
+corrected p-value for b16 is 0.010445515693157326
+
+t for b17 is 0.5366112148736093
+uncorrected p-value for b17 is 0.29578942116665985
+corrected p-value for b17 is 6.211577844499857
+
+t for b18 is 1.540223419338734
+uncorrected p-value for b18 is 0.06180947034119444
+corrected p-value for b18 is 1.2979988771650832
+
+t for b19 is 1.4784434258243146
+uncorrected p-value for b19 is 0.06970082437552061
+corrected p-value for b19 is 1.4637173118859328
+
+t for b20 is 0.6891372045501701
+uncorrected p-value for b20 is 0.24539702498947769
+corrected p-value for b20 is 5.153337524779031
+
+t for b21 is 0.8354242979986568
+uncorrected p-value for b21 is 0.20177507912896053
+corrected p-value for b21 is 4.237276661708171
+
+
+
+Method 4: Correlation
+Finding correlation coefficients using covariance / (sx * sy) formula for cases of COVID-19
+correlation coefficient 1 (NEVER) is -0.18186019484610877
+correlation coefficient 2 (RARELY) is -0.19013814490512418
+correlation coefficient 3 (SOMETIMES) is -0.1776118172497401
+correlation coefficient 4 (FREQUENTLY) is -0.1110774195249042
+correlation coefficient 5 (ALWAYS) is 0.25345584662234644
+correlation coefficient 6 (POPESTIMATE2020) is 0.9509195813323118
+correlation coefficient 7 (NPOPCHG_2020) is 0.2238275373966676
+correlation coefficient 8 (BIRTHS2020) is 0.9482380840400704
+correlation coefficient 9 (DEATHS2020) is 0.9324042668642722
+correlation coefficient 10 (NATURALINC2020) is 0.7433863250289867
+correlation coefficient 11 (INTERNATIONALMIG2020) is 0.766868100142203
+correlation coefficient 12 (DOMESTICMIG2020) is -0.3967459787304504
+correlation coefficient 13 (NETMIG2020) is -0.13702249054548657
+correlation coefficient 14 (RESIDUAL2020) is 0.21580122322187162
+correlation coefficient 15 (GQESTIMATES2020) is 0.7871694815090706
+correlation coefficient 16 (RBIRTH2020) is 0.10036569672357218
+correlation coefficient 17 (RDEATH2020) is -0.21301691951670146
+correlation coefficient 18 (RNATURALINC2020) is 0.20504928904750677
+correlation coefficient 19 (RINTERNATIONALMIG2020) is 0.27974412954561007
+correlation coefficient 20 (RDOMESTICMIG2020) is 0.00851092885807045
+correlation coefficient 21 (RNETMIG2020) is 0.03554698901015497
+
+
+Finding correlation coefficients using covariance / (sx * sy) formula for deaths from COVID-19
+correlation coefficient 1 (NEVER) is -0.18355630225959138
+correlation coefficient 2 (RARELY) is -0.20434078440092776
+correlation coefficient 3 (SOMETIMES) is -0.19431716238122257
+correlation coefficient 4 (FREQUENTLY) is -0.14334431144182644
+correlation coefficient 5 (ALWAYS) is 0.2787008981925372
+correlation coefficient 6 (POPESTIMATE2020) is 0.8877864530123265
+correlation coefficient 7 (NPOPCHG_2020) is 0.04999413308038753
+correlation coefficient 8 (BIRTHS2020) is 0.8688136424775272
+correlation coefficient 9 (DEATHS2020) is 0.9082617869445878
+correlation coefficient 10 (NATURALINC2020) is 0.5856514138806375
+correlation coefficient 11 (INTERNATIONALMIG2020) is 0.6638977931396846
+correlation coefficient 12 (DOMESTICMIG2020) is -0.4604564736701957
+correlation coefficient 13 (NETMIG2020) is -0.2459564742441868
+correlation coefficient 14 (RESIDUAL2020) is 0.18945954054480021
+correlation coefficient 15 (GQESTIMATES2020) is 0.7719842455005197
+correlation coefficient 16 (RBIRTH2020) is 0.07200063595683875
+correlation coefficient 17 (RDEATH2020) is -0.15342797174045902
+correlation coefficient 18 (RNATURALINC2020) is 0.147521701175374
+correlation coefficient 19 (RINTERNATIONALMIG2020) is 0.25396484826832333
+correlation coefficient 20 (RDOMESTICMIG2020) is -0.023665791396705962
+correlation coefficient 21 (RNETMIG2020) is 0.0007130211541725873
+
+
+Method 5: Bootstrap Confidence Intervals
+Finding bootstrap confidence intervals for correlation coefficients with predictors and cases of COVID-19
+confidence interval for correlation coefficient 1 (NEVER) is [ -0.03527366277134513 ,  0.036356472999154794 ]
+confidence interval for correlation coefficient 2 (RARELY) is [ -0.0332275149710648 ,  0.03867585294937517 ]
+confidence interval for correlation coefficient 3 (SOMETIMES) is [ -0.037554831536691924 ,  0.03629674641478194 ]
+confidence interval for correlation coefficient 4 (FREQUENTLY) is [ -0.03693153572140955 ,  0.03696471191623009 ]
+confidence interval for correlation coefficient 5 (ALWAYS) is [ -0.03459259033845636 ,  0.036110986612178105 ]
+confidence interval for correlation coefficient 6 (POPESTIMATE2020) is [ -0.02795208453598227 ,  0.04550673455049916 ]
+confidence interval for correlation coefficient 7 (NPOPCHG_2020) is [ -0.029212493822324305 ,  0.04615120558978489 ]
+confidence interval for correlation coefficient 8 (BIRTHS2020) is [ -0.02710316482620019 ,  0.03821736673759309 ]
+confidence interval for correlation coefficient 9 (DEATHS2020) is [ -0.029670798576383203 ,  0.04013439720528305 ]
+confidence interval for correlation coefficient 10 (NATURALINC2020) is [ -0.02508511106384467 ,  0.04330102031056211 ]
+confidence interval for correlation coefficient 11 (INTERNATIONALMIG2020) is [ -0.016749146328244615 ,  0.03687569583806555 ]
+confidence interval for correlation coefficient 12 (DOMESTICMIG2020) is [ -0.039594681960429125 ,  0.03736795599302616 ]
+confidence interval for correlation coefficient 13 (NETMIG2020) is [ -0.03296149561873586 ,  0.04055956065278554 ]
+confidence interval for correlation coefficient 14 (RESIDUAL2020) is [ -0.0359683859711461 ,  0.0405440844538214 ]
+confidence interval for correlation coefficient 15 (GQESTIMATES2020) is [ -0.030987166698126557 ,  0.045224741465684316 ]
+confidence interval for correlation coefficient 16 (RBIRTH2020) is [ -0.03530573377858744 ,  0.03868138124719557 ]
+confidence interval for correlation coefficient 17 (RDEATH2020) is [ -0.03805552281492305 ,  0.03760987788538325 ]
+confidence interval for correlation coefficient 18 (RNATURALINC2020) is [ -0.03740209631339922 ,  0.03593927362000628 ]
+confidence interval for correlation coefficient 19 (RINTERNATIONALMIG2020) is [ -0.034416537047526466 ,  0.040592954644639474 ]
+confidence interval for correlation coefficient 20 (RDOMESTICMIG2020) is [ -0.036867693188983856 ,  0.03855680229866942 ]
+confidence interval for correlation coefficient 21 (RNETMIG2020) is [ -0.035796561696369626 ,  0.03486570155089281 ]
+
+
+Finding bootstrap confidence intervals for correlation coefficients with predictors and deaths from COVID-19
+confidence interval for correlation coefficient 1 (NEVER) is [ -0.03739090967417732 ,  0.03634804925138293 ]
+confidence interval for correlation coefficient 2 (RARELY) is [ -0.03756382419585614 ,  0.03554107098289274 ]
+confidence interval for correlation coefficient 3 (SOMETIMES) is [ -0.03757313570033706 ,  0.036113219598469276 ]
+confidence interval for correlation coefficient 4 (FREQUENTLY) is [ -0.037768767688813994 ,  0.034717256949404036 ]
+confidence interval for correlation coefficient 5 (ALWAYS) is [ -0.03649778275847196 ,  0.03654534485205339 ]
+confidence interval for correlation coefficient 6 (POPESTIMATE2020) is [ -0.027795819387110562 ,  0.03735519966971625 ]
+confidence interval for correlation coefficient 7 (NPOPCHG_2020) is [ -0.02834944616748103 ,  0.050000618672188996 ]
+confidence interval for correlation coefficient 8 (BIRTHS2020) is [ -0.025859967609812354 ,  0.044217420911056404 ]
+confidence interval for correlation coefficient 9 (DEATHS2020) is [ -0.02998285314851474 ,  0.04293214345390737 ]
+confidence interval for correlation coefficient 10 (NATURALINC2020) is [ -0.024413532139436447 ,  0.04828343157059091 ]
+confidence interval for correlation coefficient 11 (INTERNATIONALMIG2020) is [ -0.0165247319269975 ,  0.047537411663858664 ]
+confidence interval for correlation coefficient 12 (DOMESTICMIG2020) is [ -0.04297337774494693 ,  0.038261949571582944 ]
+confidence interval for correlation coefficient 13 (NETMIG2020) is [ -0.0343488681456001 ,  0.040664482241384386 ]
+confidence interval for correlation coefficient 14 (RESIDUAL2020) is [ -0.03827118305237084 ,  0.03408037855565028 ]
+confidence interval for correlation coefficient 15 (GQESTIMATES2020) is [ -0.032990655406659436 ,  0.04136040247672185 ]
+confidence interval for correlation coefficient 16 (RBIRTH2020) is [ -0.03352793865545622 ,  0.03672281165178677 ]
+confidence interval for correlation coefficient 17 (RDEATH2020) is [ -0.035508641579157924 ,  0.0368825609739666 ]
+confidence interval for correlation coefficient 18 (RNATURALINC2020) is [ -0.036601005591952146 ,  0.036172613797483204 ]
+confidence interval for correlation coefficient 19 (RINTERNATIONALMIG2020) is [ -0.03433201818994379 ,  0.04241727702524213 ]
+confidence interval for correlation coefficient 20 (RDOMESTICMIG2020) is [ -0.039175115281952326 ,  0.03619019014633513 ]
+confidence interval for correlation coefficient 21 (RNETMIG2020) is [ -0.036157464644346285 ,  0.035483226181146625 ]
+
+
